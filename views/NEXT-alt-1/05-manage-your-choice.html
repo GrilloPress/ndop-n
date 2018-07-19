@@ -1,0 +1,138 @@
+{% set title = 'Manage your choice - Find out about my data choice' %}
+{% set PROTOTYPE_URL = 'NEXT-alt-1' %}
+{% set content_title = "Manage your choice" %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+<div class="breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out about my data choice</a></li>
+    <li class="breadcrumb__last">{{content_title}}</li>
+  </ol>
+</div>
+
+<main id="content" role="main">
+  <div class="page-section">
+    <div class="grid-row">
+      <div class="column--two-thirds">
+        <h1 class="page-title__NHSUK">{{content_title}} <small>Find out about my data choice</small></h1>
+      </div>
+    </div>
+    <div class="page-links__container">
+      <div class="grid-row">
+        <div class="column--one-third">
+          <ol>
+            <li>
+              <a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a>
+            </li>
+            <li>
+              <a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a>
+            </li>
+            <li>
+              <a href="/{{PROTOTYPE_URL}}/03-who-uses-your-data">Who uses your data</a>
+            </li>
+          </ol>
+        </div>
+        <div class="column--one-third">
+          <ol start="4">
+            <li>
+              <a href="/{{PROTOTYPE_URL}}/04-how-data-is-protected">How data is protected</a>
+            </li>
+            <li>
+              {{content_title}}
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <p>
+            Use this service to request that your confidential patient information is not used beyond your own individual care.
+          </p>
+          <p>
+            If you decide to opt out, this will be respected and upheld by NHS Digital at first. NHS Digital collects, processes and releases health and social care data on a national basis. Your decision will also be respected and upheld by all other organisations that use health and social care information by March 2020.
+          </p>
+          <p>
+            If you choose to opt out, your data may still be used during some specific situations. For example, during an epidemic where there might be a risk to other people’s health.
+          </p>
+          <p>
+            <a href="/{{PROTOTYPE_URL}}/00-where-opt-outs-dont-apply" target="_blank">More information on where opt-outs don't apply<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.
+          </p>
+          <h2 class="h3" id="information-summary">Key information summary</h2>
+          <p>Important things to remember are:</p>
+          <ul>
+            <li>your data can be used to help research and planning</li>
+            <li>you don't have to do anything if you are happy for this to continue</li>
+            <li>your decision will not affect your own individual care in any way</li>
+            <li>you can change your mind any time in the future</li>
+          </ul>
+          <h2 class="h3" id="before-you-start">Before you start</h2>
+          <p>
+            You must have an email address or phone number registered with an NHS service to continue online. Ask your GP Practice for help if you need to confirm your contact information is up-to-date.
+          </p>
+          <p>To continue you will need:</p>
+          <ul>
+            <li>access to your email or mobile phone</li>
+            <li>your NHS number</li>
+            <li>
+              to be aged 13 or over
+            </li>
+          </ul>
+
+          <details class="" role="group">
+            <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+              <span class="details__summary">Where can I find my NHS number?</span>
+            </summary>
+            <div class="details__content" id="details-content-0" aria-hidden="true">
+              <div class="reading-width">
+                <p>
+                  An NHS number is a 10 digit number, like 485 777 3456.
+                </p>
+                <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                <ul>
+                  <li>prescriptions</li>
+                  <li>test results</li>
+                  <li>hospital referral letters</li>
+                  <li>appointment letters</li>
+                  <li>your NHS medical card</li>
+                </ul>
+                <p>
+                  Ask your GP practice for help if you can't find your NHS number
+                </p>
+              </div>
+            </div>
+          </details>
+          <a role="button" class="button" aria-label="Manage your health data choice using the online service" title="Start Opt-out Process" href="/M/app/index">Start</a>
+
+          <div class="callout callout--info">
+            <h2 class="h3" id="other-ways-to-manage-your-choice">Other ways to manage your choice </h2>
+            <p>
+              If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">other ways to manage your choice</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "How data is protected", "/" + PROTOTYPE_URL + "/04-how-data-is-protected", "", "" ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

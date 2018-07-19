@@ -1,0 +1,109 @@
+{% set title = "Where an opt-out doesn't apply - Find out why your data matters" %}
+{% set content_title = "Where an opt-out doesn't apply" %}
+{% set PROTOTYPE_URL = 'release' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+
+<div class="breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out why your data matters</a></li>
+    <li>
+      <a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a>
+    </li>
+    <li class="breadcrumb__last">{{content_title}}</li>
+  </ol>
+</div>
+
+<main id="content" role="main">
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h1 class="page-title__NHSUK">{{content_title}}</h1>
+              <p>
+              There are some circumstances where opt-outs do not apply. In these circumstances, your confidential patient information may still be used.
+              </p>
+              <p>
+              Opting out will not apply:
+              </p>
+              <ul>
+                <li>
+                  where the information is used for purposes relating to your individual care
+                </li>
+                <li>
+                  where the confidential patient information does not contain your NHS number if obtaining the number would involve disproportionate effort
+                </li>
+                <li>
+                  if you have given consent for your data to be used for a specific reason, like a medical research study
+                </li>
+                <li>
+                  where data is anonymised which means you cannot be identified from the information
+                </li>
+                <li>
+                  where there is a legal requirement to provide information, such as an order of court
+                </li>
+                <li>
+                  where there is an overriding public interest in the disclosure of your data
+                </li>
+                <li>
+                  where information is used to support the management of communicable diseases and other risks to public health, like meningitis
+                </li>
+                <li>
+                  to information given to the Office for National Statistics for official statistics, like the Population Census
+                </li>
+                <li>
+                  to national patient experience surveys sent out before April 2019
+                </li>
+                <li>
+                  to data shared with Public Health England for the National Cancer Registration Service, the National Congenital Anomalies and Rare Diseases Registration Service and the oversight of population screening programmes
+                </li>
+                <li>
+                  where data is used to make sure people with learning disabilities and/or autism receive the best care possible when in hospital for mental health or challenging behaviour issues (also known as assuring transformation)
+                </li>
+                <li>
+                  where data is used to make sure correct payment is made when there is no contract. For example, if a patient lives in Bromley but is treated in hospital in Devon, an invoice will be sent from Devon to the Clinical Commissioning Group (CCG) in Bromley that holds the budget for the patient
+                </li>
+              </ul>
+              <h2>Register a separate opt-out</h2>
+              <ul class="link-list">
+                <li>
+                  <a href="https://www.ndrs.nhs.uk" target="_blank">Register a separate opt-out for the National Cancer Registration Service ​<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.
+                </li>
+                <li>
+                  <a href="https://www.ndrs.nhs.uk" target="_blank">Register a separate opt-out for the National Congenital Anomalies and Rare Diseases Registration Service ​<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.
+                </li>
+                <li>
+                  <a href="https://www.gov.uk/government/publications/opting-out-of-the-nhs-population-screening-programmes/opting-out-of-screening" target="_blank">Register a separate opt-out for population screening programmes ​<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.
+                </li>
+                <li>
+                  <a href="https://www.england.nhs.uk/learning-disabilities/care/atd" target="_blank">Register a separate opt-out for assuring transformation data ​<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.
+                </li>
+              </ul>
+
+
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              {{ patterns.page_nav( "Manage your choice", "/" + PROTOTYPE_URL + "/05-manage-your-choice" ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</main>
+{% endblock %}

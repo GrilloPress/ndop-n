@@ -1,0 +1,32 @@
+{% set title = 'Verification failure - Find out about my data choice' %}
+{% set content_title = 'Verification failure' %}
+{% set PROTOTYPE_URL = 'M' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out about my data choice
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+        <h1 class="page-title">{{content_title}}</h1>
+
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <p>Sorry, we were unable to find a unique match for your details.</p>
+
+              <p>If you plan to visit your GP anytime soon, speak to them about how your confidentical patient information is used.</p>
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

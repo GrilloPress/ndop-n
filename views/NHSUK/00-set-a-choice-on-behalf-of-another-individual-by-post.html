@@ -1,0 +1,118 @@
+{% set title = 'Set a choice on behalf of another individual by post - Find out about my data choice' %}
+{% set content_title = 'Set a choice on behalf of another individual by post' %}
+{% set PROTOTYPE_URL = 'NHSUK' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+<div class="breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out about my data choice</a></li>
+    <li>
+      <a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a>
+    </li>
+    <li><a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">Other ways to manage your choice</a></li>
+
+    <li class="breadcrumb__last">{{content_title}}</li>
+  </ol>
+</div>
+
+<main id="content" role="main">
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h1 class="page-title__NHSUK">{{content_title}} <small>Find out about my data choice</small></h1>
+              <p>
+                Use this form to set a choice on behalf of another individual by proxy. For example, a parent may want to set a choice on behalf of their child.
+              </p>
+              <h2 class="h3">Print and post form</h2>
+              <div class="grid-row">
+                <div class="column--one-quarter tablet">
+                  <a href="#">
+                    <img alt="" class="thumbnail--download" src="/images/proxy_form_thumbnail.png" height="150" width="auto" />
+                  </a>
+                </div>
+                <div class="column--two-thirds">
+                  <ul class="link-list">
+                    <li><a href="#">Manage a choice by proxy form</a></li>
+                    <li>Published: 25/05/2018</li>
+                    <li>Last updated: 25/05/2018</li>
+                    <li>Service: <a href="/{{PROTOTYPE_URL}}/01-overview">Find out about my data choice</a></li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="h4">How to use</h3>
+              <p>
+                You can use the <a href="#">manage a choice by proxy form</a> to set a choice on behalf of another individual by printing and following the instructions within the form.
+              </p>
+              <p>
+                You will need to provide:
+              </p>
+              <ul>
+                <li>
+                  the NHS number of the individual whose choice is being set
+                </li>
+                <li>
+                  proof of identity of the individual whose choice is being set
+                </li>
+                <li>
+                  proof of your identity
+                </li>
+                <li>
+                  proof of proxy, parential responsibility or third-party written authority
+                </li>
+              </ul>
+              <p>
+                You will also need to post the form to:
+                <address>
+                  <ul class="address-list">
+                    <li>
+                      Attn Confidential Contact Centre
+                    </li>
+                    <li>
+                      Register your choice
+                    </li>
+                    <li>
+                      NHS Digital
+                    </li>
+                    <li>
+                      8th Floor,
+                    </li>
+                    <li>
+                      Bridgewater Place,
+                    </li>
+                    <li>
+                      Water Lane,
+                    </li>
+                    <li>
+                      Leeds,
+                    </li>
+                    <li>
+                      LS11 5BZ
+                    </li>
+                  </ul>
+
+                </address>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              {{ patterns.page_nav( "Other ways to manage a choice", "/" + PROTOTYPE_URL + "/00-other-ways-to-manage-your-choice" ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% set title = 'Different languages and formats - Find out why your NHS data matters' %}
+{% set content_title = 'Different languages and formats' %}
+{% set PROTOTYPE_URL = 'release' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+<div class="breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out why your data matters</a></li>
+    <li class="breadcrumb__last">{{content_title}}</li>
+  </ol>
+</div>
+
+<main id="content" role="main">
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h1 class="page-title__NHSUK">{{content_title}} <small>Find out why your data matters</small></h1>
+              <p>
+                Information about your data choice can be read in 11 different languages and opened in other formats too.
+              </p>
+              <h2 id="#other-formats" class="h3">Other formats</h2>
+              <ul class="link-list">
+                <li>
+                  <a>Audio version</a>
+                </li>
+                <li>
+                  <a>British Sign Language video</a>
+                </li>
+                <li>
+                  <a>Easy read leaflet</a>
+                </li>
+                <li>
+                  <a>Large print leafet</a>
+                </li>
+              </ul>
+
+              <h2 id="#other-languages" class="h3">Other language leaflets</h2>
+              <ul class="link-list">
+                <li>
+                  <a>Albanian - Shqip</a>
+                </li>
+                <li>
+                  <a>Amharic - አማርኛ</a>
+                </li>
+                <li>
+                  <a>Arabic - العربية</a>
+                </li>
+                <li>
+                  <a>Chinese - 中文</a>
+                </li>
+                <li>
+                  <a>Farsi - فارسی</a>
+                </li>
+                <li>
+                  <a>Pashto - پښتو</a>
+                </li>
+                <li>
+                  <a>Sorani - سۆرانی</a>
+                </li>
+                <li>
+                  <a>Tamil - தமிழ்</a>
+                </li>
+                <li>
+                  <a>Tigrinya - ትግርኛ</a>
+                </li>
+                <li>
+                  <a>Urdu - اردو</a>
+                </li>
+                <li>
+                  <a>Welsh - Cymraeg</a>
+                </li>
+              </ul>
+
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="page-section">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              {{ patterns.page_nav( "Overview", "/" + PROTOTYPE_URL + "/01-overview" ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

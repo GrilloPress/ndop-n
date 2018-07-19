@@ -1,0 +1,92 @@
+{% set title = 'Other ways to manage your choice' %}
+{% set content_title = 'Other ways to manage your choice' %}
+{% set PROTOTYPE_URL = 'NHSUK' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+<div class="breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out about my data choice</a></li>
+    <li>
+      <a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a>
+    </li>
+    <li class="breadcrumb__last">{{content_title}}</li>
+  </ol>
+</div>
+
+<main id="content" role="main">
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h1 class="page-title__NHSUK">{{content_title}}</h1>
+              <h2 id="set-a-choice-by-phone" class="h3">Set a choice by phone</h2>
+              <p>
+                To manage your choice online, you must be able to verify your identity. You can't do this if you haven't registered an email or mobile number with an NHS practice.
+              </p>
+              <p>
+                Contact the NHS Digital Contact Centre to verify your identity and discuss your data sharing choices. We may be able to guide you through the service or set a choice on your behalf.
+              </p>
+              <p>
+                Call: 0300 303 5678
+              </p>
+              <p>
+                Open: 9am to 5pm Monday to Friday (excluding bank holidays).
+              </p>
+              <h2 id="set-a-choice-by-post" class="h3">Set a choice by print and post</h2>
+              <p>
+                If you are unable to use the online service for any other reason, you can use a paper print-and-post form to set a choice instead.
+              </p>
+              <div class="grid-row">
+                <div class="column--one-quarter tablet">
+                  <a href="#">
+                    <img alt="download set a choice by print and post form" class="thumbnail--download" src="/images/proxy_form_thumbnail.png" height="150" width="auto" />
+                  </a>
+                </div>
+                <div class="column--two-thirds">
+                  <ul class="link-list">
+                    <li><a href="#">Manage a choice by post</a></li>
+                    <li>Published: 25/05/2018</li>
+                    <li>Last updated: 25/05/2018</li>
+                  </ul>
+                </div>
+              </div>
+              <h2 id="set-a-choice-on-behalf-of-another-individual" class="h3">Set a choice on behalf of another individual</h2>
+              <p>
+                You can also set a choice on behalf of another individual by proxy. For example, a parent may want to set a choice on behalf of their child.
+              </p>
+              <div class="grid-row">
+                <div class="column--one-quarter tablet">
+                  <a href="#">
+                    <img alt="download set a choice on behalf of another individual by print and post form" class="thumbnail--download" src="/images/proxy_form_thumbnail.png" height="150" width="auto" />
+                  </a>
+                </div>
+                <div class="column--two-thirds">
+                  <ul class="link-list">
+                    <li><a href="#">Manage a choice by proxy form</a></li>
+                    <li>Published: 25/05/2018</li>
+                    <li>Last updated: 25/05/2018</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="page-section">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              {{ patterns.page_nav( "Manage your choice", "/" + PROTOTYPE_URL + "/05-manage-your-choice" ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+</main>
+{% endblock %}

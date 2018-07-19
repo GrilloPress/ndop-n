@@ -1,0 +1,42 @@
+{% set title = 'Contact us' %}
+{% set PROTOTYPE_URL = 'M1' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Register your preference for sharing health data
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+        <h1 class="page-title">{{title}}</h1>
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <p>Thanks, we've found your details, but we could not find a mobile number or email address.</p>
+
+              <p>This may be because you have not registered these details with your GP, or your GP has not yet shared them with us.</p>
+              
+              <p>In order to set a preference, please see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-set-your-preference">other ways to set your preference</a>.</p>
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="page-section">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              {{ patterns.page_nav( "Register your preferences for sharing patient health data", "/" + PROTOTYPE_URL + "/app/index" ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

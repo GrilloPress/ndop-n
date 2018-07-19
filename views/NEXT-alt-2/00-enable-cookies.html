@@ -1,0 +1,34 @@
+{% set title = 'Enable cookies to continue - Find out about my data choice' %}
+{% set content_title = 'Enable cookies to continue - Find out about my data choice' %}
+{% set PROTOTYPE_URL = 'NEXT-alt-2' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/choices.html' %}
+
+{% block body %}
+
+<main id="content" role="main">
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h1 class="page-title">{{content_title}}</h1>
+              <p>The 'Find out about my data choice' service puts small files (known as ‘cookies’) onto your computer to keep your visit secure.</p>
+              <p>
+                We also use cookies to collect information about how you browse the site. You can opt-out of these cookies.
+              </p>
+              <p>
+                To be able to use this service, you need to enable cookies.
+              </p>
+              <p>Find out more about <a target="_blank" href="https://www.aboutcookies.org/">how to manage cookies<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
+              <p>
+                <a role="button" class="button" href="/{{PROTOTYPE_URL}}/01-overview">Continue</a>
+              </p>
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
