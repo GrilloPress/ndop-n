@@ -3,3 +3,8 @@
 p {
   @include core-font(20);
 }
+
+.reading-width {
+
+  max-width: 580px;
+}

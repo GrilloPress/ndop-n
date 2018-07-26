@@ -1,7 +1,62 @@
 @import "../environment/tools/mixins/button";
 
-.button {
-  @include button($green);
+  .button, a.button {
+
+  margin-bottom: 0;
+  margin-top: 1.5em;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 32px;
+  line-height: 1.846;
+  border-radius: 1px;
+  display: inline-block;
+  font-size: 21px;
+	font-weight: inherit;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
+  -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+  background-color:  $green;
+  color: $white;
+  letter-spacing: .8px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($green, 5%);
+    border-color: $focus-colour;
+    box-shadow: 0 0 0 4px $focus-colour;
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $focus-colour;
+    box-shadow: 0 0 0 4px $focus-colour;
+    border-radius: 0;
+  }
+
+  &:visited {
+
+    color: $white;
+  }
+}
+
+input {
+
+  &:focus {
+
+    outline: none;
+  }
 }
 
 .button--secondary {

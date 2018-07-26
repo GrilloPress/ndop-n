@@ -8,7 +8,10 @@ $(window).ready(function() {
   $( ".alert" ).fadeIn( 1000, function() {
   // Animation complete
   });
+  otpMethod();
 });
+
+var confirmationType = localStorage.verificationOption;
 
 function resendCode() {
 
@@ -65,3 +68,14 @@ function submitCode() {
   }
 
 }
+
+function otpMethod() {
+  var otp = localStorage.verificationOption;
+
+	if (otp == "email") {
+		$( "#2fa-method" ).text( "email to al•••••••••••@gmail.com" );
+	} else {
+		$( "#2fa-method" ).text( "text message to ••••••••788" );
+	}
+
+};

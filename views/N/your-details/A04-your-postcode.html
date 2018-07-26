@@ -1,0 +1,57 @@
+{% set title = 'Your postcode - Find your NHS number' %}
+{% set content_title = 'Your postcode' %}
+{% set PROTOTYPE_URL = 'v1' %}
+{% set ANALYTICS_TRUE = 'True' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/04-your-postcode.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find your NHS number
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+
+              <div class="reading-width">
+                <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+                  <h2 class="h3" id="error-summary">To use this online service, resolve the following errors</h2>
+                  <ul class="link-list" id="link-to-errors">
+                  </ul>
+                </div>
+                  <form action="javascript:submit()">
+                    <div class="grid-row">
+                      <div class="column--three-quarters">
+                        <div id="postcode">
+                          <div class="form-row">
+                            <h1>
+                              <label for="postcode" class="h1">{{content_title}}</label>
+                            </h1>
+
+                            <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
+                            <span class="form-label__hint">For example, 'LS1 6AE'</span>
+                            <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                      <input type="submit" class="button" id="submit-details" value="Continue">
+                  </form>
+
+
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

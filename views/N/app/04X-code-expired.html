@@ -15,18 +15,19 @@
   </div>
 
   <div class="page-section">
-      <div class="reading-width">
+
           <div class="grid-row">
             <div class="column--two-thirds">
-              <h1 class="page-title">{{content_title}}</h1>
+              <div class="reading-width">
+              <h1 class="h2">{{content_title}}</h1>
               <p>
                 The code you have entered has now expired. For security reasons, your code will expire after 30 minutes.
               </p>
               <p>
-                You will need to start the service again.
+                You will need a new verification code.
               </p>
               <p>
-                <a class="button" href="/{{PROTOTYPE_URL}}/app/index">Return to the start page</a>
+                <a class="button" href="/{{PROTOTYPE_URL}}/app/04-enter-your-code">Receive a new code</a>
               </p>
               <h2 class="h3">Other ways to manage your choice</h2>
               <p>
@@ -39,8 +40,8 @@
                 Open: 9am to 5pm Monday to Friday (excluding bank holidays).
               </p>
             </div>
+            </div>
           </div>
-      </div>
   </div>
 </main>
 {% endblock %}
