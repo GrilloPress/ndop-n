@@ -21,14 +21,14 @@ function checkDetails(isAuthComplete) {
   if (a && auth === "no-nhs-number-journey" ) {
 
     // console.log("no NHS number");
-    window.location.href = "/n/app/without-nhs-number/01-your-name";
+    window.location.href = "/N/app/without-nhs-number/01-your-name";
 
   }
 
   if (a && auth === "nhs-number-journey" ) {
 
     // console.log("Using NHS number");
-    window.location.href = "/n/app/with-nhs-number/01-your-name";
+    window.location.href = "/N/app/with-nhs-number/01-your-name";
 
   }
 
