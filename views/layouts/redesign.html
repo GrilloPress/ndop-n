@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  {% include "partials/_redesign_header.html" %}
+  {% import "partials/_macros.html" as patterns %}
+  {% block scripts %}{% endblock %}
+  <script src="/javascripts/cookie.js"></script>
+
+</head>
+<body class="{% if PROTOTYPE_URL %}{{ PROTOTYPE_URL }}{% endif %}">
+
+    <div class="nhsuk-o-width-container">
+        <main id="main-content" class="nhsuk-o-main-wrapper">
+          {% block body %}{% endblock %}
+        </main>
+    </div>
+
+
+    {% if SUBFOOTER_TRUE %}
+    <section class="ndop-hub-container">
+      <div class="nhsuk-o-width-container">
+        <div class="nhsuk-o-main-wrapper">
+          <div class="nhsuk-o-grid">
+            {% block subfooter %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    {% include "partials/_redesign_footer.html" %}
+    {% include "partials/_analytics.html" %}
+
+  </body>
+</html>
