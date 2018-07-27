@@ -45,7 +45,7 @@ function checkDetails(isDayComplete, isMonthComplete, isYearComplete) {
 
   if (a && b && c) {
 
-    window.location.href = "/n/app/without-nhs-number/04-review-your-details";
+    window.location.href = "/N/app/without-nhs-number/04-review-your-details";
 
   } else {
 

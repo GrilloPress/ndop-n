@@ -30,7 +30,7 @@ function checkDetails(isFirstNameComplete, isLastNameComplete) {
 
   if (a && b) {
 
-    window.location.href = "/n/app/with-nhs-number/02-your-date-of-birth";
+    window.location.href = "/N/app/with-nhs-number/02-your-date-of-birth";
 
   }
 
