@@ -2314,7 +2314,7 @@ p {
   margin-top: 4px; }
   @media (min-width: 925px) {
     .form-label__hint {
-      margin-top: 8px; } }
+      margin-top: 16px; } }
 
 .gender-select label {
   font-weight: normal; }
