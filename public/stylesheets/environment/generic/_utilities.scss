@@ -31,3 +31,17 @@
 .util-no-margin {
   margin-top: 0 !important;
 }
+
+.util-no-margin-desktop {
+
+  @media(min-width: 925px){
+    margin-top: 0 !important;
+  }
+}
+
+form .grid-row {
+
+  @media(min-width: 925px){
+    margin-top: 0 !important;
+  }
+}
