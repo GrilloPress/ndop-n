@@ -1,0 +1,163 @@
+{% set title = 'Prototype N No 2Fa' %}
+{% set PROTOTYPE_URL = 'no2fa' %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/">Index</a></li>
+      <li>{{title}}</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">{{title}}</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>April 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This Prototype was created in response in updated content and feedback from onsite visits.</p>
+
+
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/app/00-how-to-mangage-your-choice-online">Start Prototype</a>
+    <hr>
+    <h2 id="prototype-sections">Prototype sections</h2>
+    <div class="grid-row">
+      <div class="column--one-half">
+        <h3>Pages</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-before-you-begin">Before you begin</a>
+          </li>
+        </ol>
+        <h3>Additional</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-before-you-begin">Before you begin</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-privacy-notice">Privacy notice</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-terms-of-use">Terms of use</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-cookie-policy">Cookie policy</a>
+          </li>
+        </ol>
+      </div>
+      <div class="column--one-half">
+        <h3>App and related pages</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/index">How to manage your choice online</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/02-your-details">
+              Your details
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/02X-contact-us">
+              Contact us (No associated contact details)
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/02X-verification-fail">
+              Contact us (No match found/Verification failure)
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/02X-age-restriction">
+              Contact us (Age restriction - under 13)
+            </a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/03-verification-option">
+              Verification option
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/03X-contact-us">
+              Contact us (Incorrect details in PDS)
+            </a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/04-enter-your-code">
+              Enter your code
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/04X-contact-us">
+              Contact us (No code received)
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/04X-incorrect-code">
+              Contact us (Incorrect code - third try)
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/04X-code-expired">
+              Code expired (OTP over 30mins old)
+            </a>
+            <br />
+            <a href="/{{PROTOTYPE_URL}}/app/04X-code-expired--better">
+              Code expired (OTP over 30mins old)
+            </a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/05-make-your-choice">
+              Make your choice
+            </a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/06-confirm-your-preference">
+              Confirm your choice
+            </a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/07-thank-you">
+              Thank you
+            </a>
+          </li>
+        </ol>
+        <h3>Emails</h3>
+        <ul>
+          <li>
+            <a href="/static/emails/otp.html">Security code</a>
+          </li>
+          <li>
+            <a href="/static/emails/confirmation.html">Choice confirmation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column--two-thirds">
+        <h2 id="design-hypotheses">Design hypotheses</h2>
+        <h3 class="header-hypothesis">Confirm your details interstitial</h3>
+        <p>
+          In user labs and UserZoom testing, users were left confused at what they were being asked of at the "confirm your identity" page.
+        </p>
+        <p>
+          They didn't understand the following steps of the service nor why they were being asked to submit personal identifiable data.
+        </p>
+        <p>
+          <strong>If</strong> we provide an easy to read summary before the "your details" form <br />
+          <strong>Then</strong> users will know what they will need to do to authenticate themselves for the service <br />
+          <strong>Because</strong> the stages will be shown clearly to them before they start
+        </p>
+        <p>
+          <strong>If</strong> we provide an easy to read summary before the "your details" form <br />
+          <strong>Then</strong> users will better understand why they are being asked for personal data <br />
+          <strong>Because</strong> it will be clearer why that data is being used and what role it plays in verifying the user
+        </p>
+      </div>
+    </div>
+
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/01-overview">Start Prototype</a>
+
+  </div>
+</main>
+{% endblock %}

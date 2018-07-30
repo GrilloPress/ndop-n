@@ -1,0 +1,32 @@
+{% set title = 'Review your choice - Find out why your NHS data matters' %}
+{% set content_title = 'Review your choice' %}
+{% set PROTOTYPE_URL = 'no2fa' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/06-confirm-your-choice.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+        <h1 class="h2">{{content_title}}</h1>
+
+          <div class="grid-row">
+            <div class="column--two-thirds">
+
+              <h2 id="your-preference" class="h3">Your choice</h2>
+
+
+               <a href="/{{PROTOTYPE_URL}}/app/07-thank-you" class="button">Confirm</a>
+            </div>
+          </div>
+  </div>
+
+</main>
+{% endblock %}
