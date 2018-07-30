@@ -1,5 +1,19 @@
 function submit() {
 
+  // KILL SESSION STORAGE
+  //
+  // REMOVE IF ADDITIONAL LOOKING AT singlePref NEEDED
+  //
+
+  if ( sessionStorage.singlePref ) {
+
+    sessionStorage.singlePref = "";
+
+  }
+
+  //
+  // END
+
   var isAuthComplete = false;
   checkDetails(isAuthComplete);
 
