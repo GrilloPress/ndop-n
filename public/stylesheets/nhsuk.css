@@ -2835,6 +2835,10 @@ fieldset .no-margin {
 .checkbox-has-error + label::before {
   border-color: #da291c; }
 
+.form-row-error-active [type="radio"]:checked + label:before,
+.form-row-error-active [type="radio"]:not(:checked) + label:before {
+  border-color: #da291c; }
+
 h1, .h1 {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 40px;

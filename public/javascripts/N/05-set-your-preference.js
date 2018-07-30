@@ -80,11 +80,13 @@ function confirm() {
 
       $( '#single-question' ).addClass("form-row-error-active has-error");
       $( '#single-question h2' ).addClass("error-label");
+      $( '#single-question-input-error' ).addClass("error-label error-message-active");
       $( "#link-to-errors" ).append( "<li id='single-question-link'>" + "<a href='#single-question'>" + "No choice selected" + "</a>" + "</li>" );
     } else {
       $( '#single-question' ).removeClass("form-row-error-active has-error");
       $( '#single-question h2' ).removeClass("error-label");
       $('#single-question-link').remove();
+      $( '#single-question-input-error' ).removeClass("error-label error-message-active"); 
       $( "#link-to-errors" ).append( "<li id='single-question-link'>" + "<a href='#single-question'>" + "No choice selected" + "</a>" + "</li>" );
     }
 
