@@ -31,7 +31,7 @@ function checkDetails(isDayComplete, isMonthComplete, isYearComplete) {
 
   if (a && b && c) {
 
-    window.location.href = "/v0/"app/with-nhs-number/03-your-nhs-number";
+    window.location.href = "/v0/app/with-nhs-number/03-your-nhs-number";
 
   } else {
 

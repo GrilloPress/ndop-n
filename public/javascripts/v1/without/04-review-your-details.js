@@ -24,15 +24,15 @@ function submit() {
 
   if (sessionStorage.firstName === "Fake") {
 
-    window.location.href = "/N/errors/05X-verification-fail";
+    window.location.href = "v0/errors/05X-verification-fail";
 
   } else if (sessionStorage.firstName === "Age") {
 
-    window.location.href = "/N/errors/05X-age-restriction";
+    window.location.href = "v0/errors/05X-age-restriction";
 
   } else {
 
-    window.location.href = "/N/app/03-verification-option";
+    window.location.href = "v0/app/03-verification-option";
 
   }
 

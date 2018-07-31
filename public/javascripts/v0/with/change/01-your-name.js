@@ -47,7 +47,7 @@ function checkDetails(isFirstNameComplete, isLastNameComplete) {
 
   if (a && b) {
 
-    window.location.href = "/v0/"app/with-nhs-number/04-review-your-details";
+    window.location.href = "/v0/app/with-nhs-number/04-review-your-details";
 
   }
 
