@@ -1,36 +1,50 @@
 function submit() {
 
-  var firstNameComplete = false;
-  var lastNameComplete = false;
-
-
-  checkDetails(firstNameComplete, lastNameComplete);
+  var dayComplete, monthComplete, yearComplete = false;
+  checkDetails(dayComplete, monthComplete, yearComplete);
 
 }
 
-function checkDetails(isFirstNameComplete, isLastNameComplete) {
+function checkDetails(isDayComplete, isMonthComplete, isYearComplete) {
 
   // get values
-  var firstName = $('input[name="first-name"]').val().trim();
-  var lastName = $('input[name="last-name"]').val().trim();
+  var day = $('input[name="dob-day"]').val().trim();
+  var month = $('input[name="dob-month"]').val().trim();
+  var year = $('input[name="dob-year"]').val().trim();
 
-  var a = checkFieldIsEmpty(firstName, "first-name", "First name", isFirstNameComplete);
-  var b = checkFieldIsEmpty(lastName, "last-name", "Last name", isLastNameComplete);
+  var a = checkFieldIsEmpty(day, "dob", "Date of birth", isDayComplete);
+  var b = checkFieldIsEmpty(month, "dob", "Date of birth", isMonthComplete);
+  var c = checkFieldIsEmpty(year, "dob", "Date of birth", isYearComplete);
 
   // validate
 
   // push to session storate
 
-  sessionStorage.firstName = firstName;
-  sessionStorage.lastName = lastName;
+  sessionStorage.day = day;
+  sessionStorage.month = month;
+  sessionStorage.year = year;
+  sessionStorage.dob = day + " " + month + " " + year;
 
   // redirect to next page
 
   // console.log( fieldComplete )
 
-  if (a && b) {
+  if (a && b && c) {
 
-    window.location.href = "/v1/app/with-nhs-number/02-your-date-of-birth";
+    window.location.href = "/v1/app/details/03-do-you-have-your-nhs-number";
+
+  } else {
+
+    $('#' + 'dob' + '-error-link').remove();
+    $( "#link-to-errors" ).append( "<li id='" + "dob" + "-error-link'>" + "<a href='#" + "dob" + "'>" + "" + "Date of birth" + " is missing" + "</a>" + "</li>" );
+
+    $( '#dob' ).addClass("form-row-error-active has-error");
+		$('#dob' + '-error').addClass( 'error-message-active' );
+
+
+    $(" .error-summary ").addClass(" error-message-active ");
+    $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
+    $( ".error-summary" ).focus();
 
   }
 
@@ -42,7 +56,7 @@ function checkFieldIsEmpty(fieldValue, fieldName, fieldText, fieldComplete) {
   // fieldValue firstName
   // fieldText First name
 
-  if (fieldValue ==''){
+  if (fieldValue == ''){
 		//Adds the validation error css class to the form group and shows the error message
 		$( '#' + fieldName ).addClass("form-row-error-active has-error");
 		$('#' + fieldName + '-error').addClass( 'error-message-active' );

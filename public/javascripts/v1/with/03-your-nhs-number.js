@@ -24,7 +24,7 @@ function checkDetails(isnhsNumberComplete) {
 
   if (a) {
 
-    window.location.href = "/v0/app/with-nhs-number/04-review-your-details";
+    window.location.href = "/v1/app/with-nhs-number/04-review-your-details";
 
   }
 

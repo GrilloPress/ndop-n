@@ -42,6 +42,16 @@ router.get('/no2fa/01-overview', function(req, res, next) {
 });
 
 // GET v1 index page.
+router.get('/v0', function(req, res, next) {
+  res.render( 'v0/index' );
+});
+
+// GET v1 index page.
+router.get('/v1', function(req, res, next) {
+  res.render( 'v1/index' );
+});
+
+// GET v1 index page.
 router.get('/v0/01-overview', function(req, res, next) {
   res.render( 'v0/app/01-how-would-you-like-to-confirm-your-identity' );
 });
@@ -58,12 +68,12 @@ router.get('/v0/00-other-ways-to-manage-your-choice', function(req, res, next) {
 
 // GET v1 index page.
 router.get('/v1/01-overview', function(req, res, next) {
-  res.render( 'v1/app/01-how-would-you-like-to-confirm-your-identity' );
+  res.render( 'v1/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
 router.get('/v1/app/index', function(req, res, next) {
-  res.render( 'v1/app/01-how-would-you-like-to-confirm-your-identity' );
+  res.render( 'v1/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
