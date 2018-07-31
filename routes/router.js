@@ -31,6 +31,18 @@ router.get('/N/00-other-ways-to-manage-your-choice', function(req, res, next) {
   res.render( 'release/00-other-ways-to-manage-your-choice' );
 });
 
+// GET v1 index page.
+router.get('/no2fa', function(req, res, next) {
+  res.render( 'no2fa/index' );
+});
+
+// GET v1 index page.
+router.get('/no2fa/01-overview', function(req, res, next) {
+  res.render( 'no2fa/app/00-how-to-manage-your-choice-online' );
+});
+
+
+
 // catch all GET routes
 
 router.get('/:view', function(req, res, next) {
