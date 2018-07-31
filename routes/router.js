@@ -41,6 +41,36 @@ router.get('/no2fa/01-overview', function(req, res, next) {
   res.render( 'no2fa/app/00-how-to-manage-your-choice-online' );
 });
 
+// GET v1 index page.
+router.get('/v0/01-overview', function(req, res, next) {
+  res.render( 'v0/app/01-how-would-you-like-to-confirm-your-identity' );
+});
+
+// GET v1 index page.
+router.get('/v0/app/index', function(req, res, next) {
+  res.render( 'v0/app/01-how-would-you-like-to-confirm-your-identity' );
+});
+
+// GET v1 index page.
+router.get('/v0/00-other-ways-to-manage-your-choice', function(req, res, next) {
+  res.render( 'release/00-other-ways-to-manage-your-choice' );
+});
+
+// GET v1 index page.
+router.get('/v1/01-overview', function(req, res, next) {
+  res.render( 'v1/app/01-how-would-you-like-to-confirm-your-identity' );
+});
+
+// GET v1 index page.
+router.get('/v1/app/index', function(req, res, next) {
+  res.render( 'v1/app/01-how-would-you-like-to-confirm-your-identity' );
+});
+
+// GET v1 index page.
+router.get('/v1/00-other-ways-to-manage-your-choice', function(req, res, next) {
+  res.render( 'release/00-other-ways-to-manage-your-choice' );
+});
+
 
 
 // catch all GET routes
