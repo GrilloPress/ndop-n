@@ -1,5 +1,8 @@
 {% set title = 'Prototype N No 2Fa' %}
 {% set PROTOTYPE_URL = 'no2fa' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
+{% endblock %}
 {% extends 'layouts/layout.html' %}
 
 {% block body %}

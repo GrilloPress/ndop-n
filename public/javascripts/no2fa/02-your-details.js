@@ -32,7 +32,7 @@ function matchDetails() {
 		} else if ((formComplete == true) && (firstName == 'young')) {
 			window.location.href = "/no2fa" + '/app/02X-age-restriction';
 		} else if (formComplete == true) {
-			window.location.href= "/no2fa" + "/app/05-set-your-preference"
+			window.location.href= "/no2fa" + "/app/04-spinner"
 		}
 };
 

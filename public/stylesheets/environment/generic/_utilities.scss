@@ -45,3 +45,11 @@ form .grid-row {
     margin-top: 0 !important;
   }
 }
+
+.util-displaynone-mobile {
+
+  @include media(mobile) {
+    display: none;
+  }
+
+}

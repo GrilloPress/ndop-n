@@ -79,6 +79,39 @@
       background-color: white;
       border: 1px solid;
     }
+
+    a {
+
+      color: $white;
+
+      &:hover {
+
+        color: $blue;
+        background-color: $white;
+      }
+
+      &:focus {
+
+        color: $blue;
+        background-color: $white;
+      }
+    }
+
+    .button {
+
+      background-color: $white;
+      color: $black;
+
+      &:hover {
+
+        color: $blue;
+      }
+
+      &:focus {
+
+        color: $blue;
+      }
+    }
   }
 
   .int-card {

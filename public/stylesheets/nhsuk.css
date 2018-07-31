@@ -477,6 +477,10 @@ body {
   form .grid-row {
     margin-top: 0 !important; } }
 
+@media (max-width: 640px) {
+  .util-displaynone-mobile {
+    display: none; } }
+
 .grid-row {
   margin: 0 -16px; }
   .grid-row:after {
@@ -601,6 +605,20 @@ body {
     .column--three-quarters {
       float: left;
       width: 75%; } }
+  .column--three-quarters.tablet {
+    display: block;
+    padding: 0 16px; }
+    @media (min-width: 641px) {
+      .column--three-quarters.tablet {
+        float: left;
+        width: 75%; } }
+  .column--three-quarters.mobile {
+    display: block;
+    padding: 0 16px; }
+    @media (max-width: 640px) {
+      .column--three-quarters.mobile {
+        float: left;
+        width: 75%; } }
 
 .column--one-quarter-right {
   display: block;
@@ -3481,6 +3499,21 @@ input[type=range]:focus::-ms-fill-upper {
       color: #231f20;
       background-color: white;
       border: 1px solid; }
+    .callout--interruption.alt a {
+      color: #fff; }
+      .callout--interruption.alt a:hover {
+        color: #005eb8;
+        background-color: #fff; }
+      .callout--interruption.alt a:focus {
+        color: #005eb8;
+        background-color: #fff; }
+    .callout--interruption.alt .button {
+      background-color: #fff;
+      color: #231f20; }
+      .callout--interruption.alt .button:hover {
+        color: #005eb8; }
+      .callout--interruption.alt .button:focus {
+        color: #005eb8; }
   .callout--interruption .int-card .int-card--img {
     text-align: center;
     position: relative;
@@ -3564,5 +3597,23 @@ input[type=range]:focus::-ms-fill-upper {
       @media (max-width: 640px) {
         .review-your-answers dd.change {
           float: none; } }
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.container--loader {
+  text-align: center; }
 
 /*# sourceMappingURL=nhsuk.css.map */

@@ -1,6 +1,6 @@
 {% set title = 'How would you like to confirm your identity? - Find out why your NHS data matters' %}
 {% set content_title = 'How would you like to confirm your identity?' %}
-{% set PROTOTYPE_URL = 'no2fa' %}
+{% set PROTOTYPE_URL = 'N' %}
 {% set ANALYTICS_TRUE = 'True' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/00-how-would-you-like-to-confirm-your-identity.js"></script>
@@ -42,22 +42,13 @@
                             </div>
 
                             <input type="radio" name="auth" id="nhs-number-journey" value="nhs-number-journey" class="multiple-choice--radio">
-                            <label for="nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg"> <strong>Use my NHS Number</strong>
-
-                              <span class="form-label__hint">Provide your name, date of birth and NHS number.</span>
-
-                              <span class="form-label__hint">If we find your contact details we will send you a one-time security code.</span>
-
+                            <label for="nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
+                              Yes
                             </label>
-
 
                             <input type="radio" name="auth" id="no-nhs-number-journey" value="no-nhs-number-journey" class="">
                             <label for="no-nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
-                              <strong>Provide additional details</strong>
-                              <span class="form-label__hint">If you are unable to find your NHS Number you may be able to confirm your identity by providing your name, date of birth and postcode.</span>
-
-                              <span class="form-label__hint">If we find a unique match and your contact details we will send you a one-time security code.</span>
-
+                              No
                             </label>
 
                           </fieldset>
