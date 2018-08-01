@@ -74,8 +74,6 @@ function otpMethod() {
 
 	if (otp == "email") {
 		$( "#2fa-method" ).text( "email to al•••••••••••@gmail.com" );
-	} else {
-		$( "#2fa-method" ).text( "text message to ••••••••788" );
 	}
 
 };
