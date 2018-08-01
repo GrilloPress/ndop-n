@@ -1668,8 +1668,6 @@ table {
   line-height: 1.846;
   border-radius: 1px;
   display: inline-block;
-  text-align: center;
-  width: auto;
   font-size: 21px;
   font-weight: inherit;
   position: relative;
@@ -1683,7 +1681,9 @@ table {
   background-color: #007f3b;
   color: #fff;
   letter-spacing: .8px; }
-  .button:hover, .button:active, .button:focus, a.button:hover, a.button:active, a.button:focus {
+  .button:hover, a.button:hover {
+    background-color: #004c23; }
+  .button:active, .button:focus, a.button:active, a.button:focus {
     background-color: #00662f;
     border-color: #ffb81c;
     box-shadow: 0 0 0 4px #ffb81c;
@@ -1696,6 +1696,11 @@ table {
     border-radius: 0; }
   .button:visited, a.button:visited {
     color: #fff; }
+  @media (max-width: 640px) {
+    .button, a.button {
+      font-size: 19px;
+      letter-spacing: .5px;
+      margin-top: .5em; } }
 
 input:focus {
   outline: none; }
@@ -3564,6 +3569,9 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: 6px; }
   .callout--interruption ol ol li:last-child {
     margin-bottom: 0; }
+  @media (max-width: 640px) {
+    .callout--interruption {
+      margin: 0 -8px; } }
 
 .link--new-tab {
   text-decoration: none;

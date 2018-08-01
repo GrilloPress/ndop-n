@@ -11,8 +11,6 @@
   line-height: 1.846;
   border-radius: 1px;
   display: inline-block;
-  text-align: center;
-  width: auto;
   font-size: 21px;
 	font-weight: inherit;
   position: relative;
@@ -27,7 +25,11 @@
   color: $white;
   letter-spacing: .8px;
 
-  &:hover,
+  &:hover {
+
+    background-color: darken($green, 10%);
+
+  }
   &:active,
   &:focus {
     background-color: darken($green, 5%);
@@ -48,6 +50,12 @@
   &:visited {
 
     color: $white;
+  }
+
+  @include media(mobile) {
+    font-size: 19px;
+    letter-spacing: .5px;
+    margin-top: .5em;
   }
 }
 
