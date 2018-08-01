@@ -1668,6 +1668,8 @@ table {
   line-height: 1.846;
   border-radius: 1px;
   display: inline-block;
+  text-align: center;
+  width: auto;
   font-size: 21px;
   font-weight: inherit;
   position: relative;
