@@ -4,6 +4,7 @@
 {% set ANALYTICS_TRUE = 'True' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/details/03-do-you-have-your-nhs-number.js"></script>
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -57,6 +58,29 @@
                       <input type="submit" class="button" id="submit-details" value="Continue">
 
                   </form>
+
+                  <details class="" role="group">
+                    <summary role="button">
+                      <span class="details__summary">Where you can find your NHS number</span>
+                    </summary>
+                    <div class="details__content">
+                      <div class="reading-width">
+                        <p>
+                          An NHS number is a 10 digit number, like 485 777 3456.
+                        </p>
+                        <p>You can find your NHS number by logging in to a GP practice online service or on any document sent to you by the NHS. This may include:</p>
+                        <ul>
+                          <li>prescriptions</li>
+                          <li>test results</li>
+                          <li>hospital referral letters</li>
+                          <li>appointment letters</li>
+                        </ul>
+                        <p>
+                          You can also ask your GP practice for help if you can't find your NHS number.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
               </div>
       </div>
   </div>
