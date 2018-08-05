@@ -12,7 +12,7 @@
   border-radius: 1px;
   display: inline-block;
   font-size: 21px;
-	font-weight: inherit;
+	font-weight:  500;
   position: relative;
   text-decoration: none;
   vertical-align: middle;
@@ -56,6 +56,48 @@
     font-size: 19px;
     letter-spacing: .5px;
     margin-top: .5em;
+  }
+
+  &.wire {
+
+    border: 2px solid darken( $blue, 5% );
+    background-color: transparent;
+    color: darken( $blue, 5% );
+
+    &:hover {
+
+      background-color: #efefef;
+    }
+
+  }
+
+  &.xl {
+
+    display: block;
+    padding: 16px;
+
+    & + .xl {
+
+      margin-top: 8px;
+    }
+
+    .inner {
+
+      @include media(mobile){
+
+        display: block;
+      }
+
+
+    }
+
+    @include media(mobile) {
+      font-size: 17px;
+      line-height: 27.5px; //golden ratio of 17px
+      padding: 8px;
+      min-height: 64px;
+    }
+
   }
 }
 
@@ -160,6 +202,63 @@ input {
       position: absolute;
       top: 0;
       width: 100%;
+  }
+
+}
+
+
+.trigger {
+
+  padding: 16px 32px;
+  background: #fff;
+  color: $black;
+  text-decoration: none;
+  display: block;
+  line-height: 1.846;
+  border-radius: 1px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+
+  &:hover {
+
+    color: $blue;
+    background-color: $white;
+  }
+
+  &:focus {
+
+    color: $blue;
+    background-color: $white;
+  }
+
+  @include media(mobile){
+
+    padding: 8px;
+  }
+
+  .trigger-inner {
+
+  }
+
+  .trigger-text {
+
+    @include bold-font(20);
+    color: $black;
+    height: 75px;
+    margin-top: 0;
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+
+    @include media(mobile){
+
+      font-size: 17px;
+      line-height: 27.5px;
+    }
+
   }
 
 }
