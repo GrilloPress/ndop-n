@@ -8,6 +8,11 @@
   border: 1px solid #cbd6d8;
   border-radius: 5px;
 
+  &.with-links {
+
+    border-radius: 5px 5px 0 0;
+  }
+
   h1 {
 
     @include bold-font(36);
@@ -111,6 +116,7 @@
 
         color: $blue;
       }
+
     }
   }
 

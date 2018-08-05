@@ -1669,7 +1669,7 @@ table {
   border-radius: 1px;
   display: inline-block;
   font-size: 21px;
-  font-weight: inherit;
+  font-weight: 500;
   position: relative;
   text-decoration: none;
   vertical-align: middle;
@@ -1701,6 +1701,26 @@ table {
       font-size: 19px;
       letter-spacing: .5px;
       margin-top: .5em; } }
+  .button.wire, a.button.wire {
+    border: 2px solid #00519f;
+    background-color: transparent;
+    color: #00519f; }
+    .button.wire:hover, a.button.wire:hover {
+      background-color: #efefef; }
+  .button.xl, a.button.xl {
+    display: block;
+    padding: 16px; }
+    .button.xl + .xl, a.button.xl + .xl {
+      margin-top: 8px; }
+    @media (max-width: 640px) {
+      .button.xl .inner, a.button.xl .inner {
+        display: block; } }
+    @media (max-width: 640px) {
+      .button.xl, a.button.xl {
+        font-size: 17px;
+        line-height: 27.5px;
+        padding: 8px;
+        min-height: 64px; } }
 
 input:focus {
   outline: none; }
@@ -1926,6 +1946,53 @@ input:focus {
     position: absolute;
     top: 0;
     width: 100%; }
+
+.trigger {
+  padding: 16px 32px;
+  background: #fff;
+  color: #231f20;
+  text-decoration: none;
+  display: block;
+  line-height: 1.846;
+  border-radius: 1px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s; }
+  .trigger:hover {
+    color: #005eb8;
+    background-color: #fff; }
+  .trigger:focus {
+    color: #005eb8;
+    background-color: #fff; }
+  @media (max-width: 640px) {
+    .trigger {
+      padding: 8px; } }
+  .trigger .trigger-text {
+    font-family: "Frutiger W01", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: none;
+    color: #231f20;
+    height: 75px;
+    margin-top: 0;
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle; }
+    @media (min-width: 641px) {
+      .trigger .trigger-text {
+        font-size: 20px;
+        line-height: 32px; } }
+    @media (min-width: 925px) {
+      .trigger .trigger-text {
+        font-size: 20px;
+        line-height: 32px; } }
+    @media (max-width: 640px) {
+      .trigger .trigger-text {
+        font-size: 17px;
+        line-height: 27.5px; } }
 
 .link-list__row {
   margin: 0 -16px; }
@@ -2839,7 +2906,8 @@ fieldset .no-margin {
   padding-left: 30px;
   background-position-x: 0%;
   background-position-y: 50%;
-  background-size: 22px; }
+  background-size: 22px;
+  margin-top: 4px; }
 
 .form-row-error-active .error-label-checkbox {
   padding-left: 70px;
@@ -3385,6 +3453,11 @@ input[type=range]:focus::-ms-fill-upper {
       text-align: center;
       margin: auto; }
 
+small.stepper {
+  display: block;
+  font-weight: 500;
+  font-size: 60%; }
+
 .details-group {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 14px 3px #ebebeb;
@@ -3432,6 +3505,8 @@ input[type=range]:focus::-ms-fill-upper {
   box-shadow: 0px 0px 14px 3px #ebebeb;
   border: 1px solid #cbd6d8;
   border-radius: 5px; }
+  .callout--interruption.with-links {
+    border-radius: 5px 5px 0 0; }
   .callout--interruption h1 {
     font-family: "Frutiger W01", Arial, sans-serif;
     font-size: 28px;
