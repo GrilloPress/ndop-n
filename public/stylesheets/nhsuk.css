@@ -1699,8 +1699,8 @@ table {
   @media (max-width: 640px) {
     .button, a.button {
       font-size: 19px;
-      letter-spacing: .5px;
-      margin-top: .5em; } }
+      letter-spacing: .3px;
+      margin-top: 16px; } }
   .button.wire, a.button.wire {
     border: 2px solid #00519f;
     background-color: transparent;
