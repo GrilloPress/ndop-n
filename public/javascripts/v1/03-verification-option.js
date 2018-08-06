@@ -2,6 +2,10 @@
 //JQuery ------------------------------------------------------------------------------------------------------------------
 var THE_PROTOTYPE_URL = "/v1";
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 //waits for the page to load
 $(window).load(function() {
   $("#choose-option").click(confirmAll);
@@ -9,6 +13,23 @@ $(window).load(function() {
   $( ".alert" ).fadeIn( 1000, function() {
   // Animation complete
   });
+
+  var theRoll = getRandomInt(3);
+  console.log(theRoll);
+
+  if (theRoll == 0 ){
+
+    $("#text-verification").hide();
+    $("label[for='text-verification']").hide();
+
+  } else if (theRoll == 1 ) {
+
+    $("#email-verification").hide();
+    $("label[for='email-verification']").hide();
+
+  } else {
+    console.log(theRoll);
+  }
 
   $( 'input[name="channel-choice"]:checked' ).each( function () {
 
