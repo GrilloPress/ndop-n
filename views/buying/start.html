@@ -1,0 +1,126 @@
+{% set title = 'Overview - Find out why your data matters' %}
+{% set content_title = "Overview" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+        <li><a href="/">Become a supplier</a></li>
+        <li><a href="/">Guidance for buyers</a></li>
+        <li><a href="/">Help</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/login">Log in</a></li>
+    </ol>
+</nav>
+{% endblock %}
+
+
+{% block body %}
+<main id="content" role="main">
+  <section class="search-banner" aria-label="Search form">
+    <div class="grid-wrapper grid-wrapper--collapse">
+      <h1>Buy products or services</h1>
+      <p class="search-banner__headline">Find products or services for digital NHS projects</p>
+      <form style="display: none;" role="search" method="get" action="/search" class="search-banner__form" id="search">
+        <div>
+          <input type="text" name="query" id="query" class="search-banner__input" placeholder="Search for products or services" value="" aria-label="Search">
+          <label for="query" class="visually-hidden">Search</label>
+        </div>
+        <div>
+          <button class="search-banner__button" data-uipath="search.button">Search</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="page-block">
+    <div class="grid-wrapper grid-wrapper--article">
+      <div class="article-section article-section--data-and-information article-section--padded">
+
+        <div class="article-section__contents">
+
+          <div>
+            <div>
+
+
+
+
+
+              <div class="cta-list cta-list--grid cta-list--fitted-grid cta-list--data-and-information">
+                <div class="grid-row">
+                  <div class="column column--one-half column--left">
+                    <div class="cta cta--large">
+                      <h3 class="cta__title">Buying products or services</h3>
+                      <p class="cta__text">NHS and public health organisations, including agencies and arm's length bodies, can use this service to find products and services.</p>
+                      <a href="/data-and-information" class="cta__button button">Log in or register as a buyer</a>
+                    </div>
+                  </div>
+                  <div class="column column--one-half column--right">
+                    <div class="cta cta--large">
+                      <h3 class="cta__title">Selling products or services</h3>
+                      <p class="cta__text">Sell your services directly to the NHS. Bid on contracts within one of the largest marketplaces in the United Kingdom.</p>
+                      <a href="/data-and-information/national-indicator-library" class="cta__button button">Log in or register as a seller</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="content-box content-box--secondary content-box--visible-sections content-box--latest-publications">
+        <div class="grid-row">
+            <div class="column">
+                <h3>Guidance</h3>
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <ol class="list--reset cta-list cta-list--grid cta-list--fitted-grid">
+                <li class="column column--one-third column--left">
+                    <article class="cta">
+                        <h2 class="cta__title"><a href="#">Becoming a supplier</a></h2>
+                        <p>
+                          Find out more about the steps required to registering as a supplier.
+                        </p>
+                    </article>
+                </li>
+                <li class="column column--one-third column--center">
+                    <article class="cta">
+                        <h2 class="cta__title"><a href="#">Buyer's guide</a></h2>
+                        <p>
+                          Learn how to sign up as a buyer and the process of setting up a request.
+                        </p>
+                    </article>
+                </li>
+                <li class="column column--one-third column--right">
+                    <article class="cta">
+                        <h2 class="cta__title"><a href="#">Capabilities guidance</a></h2>
+                        <p>
+                          Understand the new capabilities framework. Learn how to demonstrate your product or service fits relevant criteria.
+                        </p>
+                    </article>
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="grid-row">
+            <div class="column">
+                <a href="search?sort=relevance&amp;area=data" class="link">View all guidance</a>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            <div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

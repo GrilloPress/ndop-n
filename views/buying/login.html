@@ -1,0 +1,97 @@
+{% set title = 'Log in - Find out why your data matters' %}
+{% set content_title = "Log in" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+        <li><a href="/">Become a supplier</a></li>
+        <li><a href="/">Guidance for buyers</a></li>
+        <li><a href="/">Help</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/login">Log in</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<div class="grid-wrapper">
+    <div class="grid-row">
+        <div class="column column--reset">
+            <ol class="breadcrumb" title="Navigation">
+                <li class="breadcrumb__crumb">
+                    <a href="/{{PROTOTYPE_URL}}/start" class="breadcrumb__link">NHS Digital Buying Catalogue</a>
+                </li>
+                    <li class="breadcrumb__crumb">
+                        >
+
+                        <span class="breadcrumb__link breadcrumb__link--secondary">Log in</span>
+                    </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--one-half column--reset">
+                            <div class="">
+                              <form method="get" action="/{{PROTOTYPE_URL}}/dashboard">
+                    <fieldset>
+                      <legend>
+                        <h1 class="h2">Log in</h1>
+                      </legend>
+                          <div class="form-group form-row" id="first-name">
+                            <label for="first-name-input" class="form-label error-label">Email</label>
+                            <span class="error error-message error-text" id="first-name-error">
+                              Enter your first name
+                            </span>
+                            <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                          </div>
+
+                          <div class="form-group form-row" id="last-name">
+                            <label for="last-name-input" class="form-label error-label">Password</label>
+                            <span class="error error-message error-text" id="last-name-error">Enter your last name
+                            </span>
+                            <input autocomplete="off" type="text" class="form-control" id="last-name-input" name="last-name" value="">
+                          </div>
+                          </fieldset>
+                          <input type="submit" class="button" id="submit-details" value="Continue">
+
+
+
+                  </form>
+                  <p>
+                    <a href="#">Forgotten password?</a>
+                  </p>
+
+                            </div>
+                        </div>
+                        <div class="column column--one-half">
+                          <div class="need-an-account">
+                            <h2 class="h3">Need an account?</h2>
+                            <p>
+                              Account registration is currently invite only during our private beta.
+                            </p>
+                            <p>
+                              <a href="#">Get involved in our private beta</a>
+                            </p>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

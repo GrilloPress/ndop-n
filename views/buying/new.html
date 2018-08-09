@@ -1,0 +1,62 @@
+{% set title = 'New - Find out why your data matters' %}
+{% set content_title = "New" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+        <li><a href="/">Become a supplier</a></li>
+        <li><a href="/">Guidance for buyers</a></li>
+        <li><a href="/">Help</a></li>
+        <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<div class="grid-wrapper">
+    <div class="grid-row">
+        <div class="column column--reset">
+            <ol class="breadcrumb" title="Navigation">
+                <li class="breadcrumb__crumb">
+                    <a href="/{{PROTOTYPE_URL}}/dashboard" class="breadcrumb__link">Home</a>
+                </li>
+                    <li class="breadcrumb__crumb">
+                        >
+
+                        <span class="breadcrumb__link breadcrumb__link--secondary">Register a service or product</span>
+                    </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--two-thirds column--reset">
+                            <div class="">
+                              <h1 class="h2">Register a service or product</h1>
+
+                            </div>
+                        </div>
+                        <div class="column column--one-third">
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

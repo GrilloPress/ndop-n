@@ -1,0 +1,165 @@
+{% set title = 'Dashboard - Find out why your data matters' %}
+{% set content_title = "Dashboard" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+        <li><a href="#">Help</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/account">Account</a></li>
+        <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<div class="grid-wrapper">
+    <div class="grid-row">
+        <div class="column column--reset">
+            <ol class="breadcrumb" title="Navigation">
+            </ol>
+        </div>
+    </div>
+</div>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                  <div class="article-section article--hub">
+                    <div class="grid-row">
+                      <div class="column column--full">
+                          <div class="">
+                            <h2>Your submissions</h2>
+                            <div class="content-box content-box--secondary">
+                              <table class="summary-item-body">
+                                <caption class="visually-hidden">
+                                  Important dates
+                                </caption>
+
+                                <thead>
+                                  <tr>
+                                    <td>
+                                      ID
+                                    </td>
+                                    <td>
+                                      Name
+                                    </td>
+                                    <td>
+                                      Submitted
+                                    </td>
+                                    <td>
+                                      Status
+                                    </td>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr class="summary-item-row">
+                                    <td class="summary-item-field-first">
+                                      <a href="#">#6538f76r7f</a>
+                                    </td>
+                                    <td class="summary-item-field-first">
+                                      <a href="#">Diabetes self-management portal</a>
+                                    </td>
+                                    <td class="summary-item-field">
+                                      <span>Thursday 10 November 2017</span>
+                                    </td>
+                                    <td class="summary-item-field">
+                                      <span class="status">In review</span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <p>
+                              <a href="/{{PROTOTYPE_URL}}/new">Create a new submission</a>
+                            </p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="article-section">
+                    <div class="grid-row">
+                      <div class="column column--full column--reset">
+                        <div class="content-box content-box--tertiary content-box--information content-box--padded">
+                          <div class="grid-row">
+                              <div class="column">
+                                  <h1 class="h3 content-box-title">Make your product a success</h1>
+                              </div>
+                          </div>
+
+                          <div class="grid-row">
+                              <div class="column column--two-thirds">
+                                  <div class="content-box-contents">
+                                      <p>To successfully set up a product or service you'll need to demonstrate how to fit certain capabilities.</p>
+
+                                      <a href="#" class="link">Learn more about capabilities</a>
+                                  </div>
+                              </div>
+                              <div class="column column--one-third">
+                                  <div class="content-box-image-wrapper">
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="article-section article--hub">
+                      <div class="grid-row">
+                        <div class="column column--reset">
+                            <div class="">
+                              <h2>Your products and services</h2>
+                              <p>
+                                You currently have no listed products or services
+                              </p>
+                            </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="article-section article--hub">
+                      <div class="grid-row">
+                        <div class="column column--one-half column--reset">
+                            <div class="">
+                              <h2>Guidance</h2>
+                              <p>
+                                Guidance on submitting your product or service:
+                              </p>
+                              <ul>
+                                <li>
+                                  <a href="#">Capabilities framework</a>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="column column--one-half">
+                          <div class="need-an-account">
+                            <h2 class="h3">Capabilities walk-through tool</h2>
+                            <p>
+                              Evaluate your product or service with our tool to match which capabilities you should register.
+                            </p>
+                            <p>
+                              <a href="#">Start now</a>
+                            </p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

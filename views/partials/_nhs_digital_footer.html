@@ -1,0 +1,236 @@
+<footer role="contentinfo" class="site-footer white-links" id="footer">
+    <div class="grid-wrapper grid-wrapper--full-width grid-wrapper--wide">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div class="site-footer__section site-footer__section--top">
+                    <div class="grid-wrapper grid-wrapper--collapse">
+                        <div class="grid-row">
+                            <div class="column column--one-half column--left">
+                                <nav class="site-footer__menu site-footer__menu--1">
+                                    <h2 class="list__header">About NHS Digital</h2>
+                                    <ul class="list list--reset list--close">
+                                        <li><a href="/about-nhs-digital">About us</a></li>
+                                        <li><a href="/our-strategy">Our strategy</a></li>
+                                        <li><a href="/annual-report-and-accounts">Annual report and accounts</a></li>
+                                        <li><a href="/our-business-plan">Our business plan</a></li>
+                                        <li><a href="/press-releases">Press releases</a></li>
+                                        <li><a href="/how-we-look-after-your-information">How we look after your information</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="column column--one-quarter">
+                                <nav class="site-footer__menu site-footer__menu--2">
+                                    <h2 class="list__header">Contact us</h2>
+                                    <div class="list">
+                                        <div class="list__item">
+                                            <span>Telephone:</span><br>
+                                            <a href="tel:004403003035678">0300 303 5678</a>
+                                        </div>
+
+                                        <div class="list__item">
+                                            <span>Email:</span><br>
+                                            <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="column column--one-quarter column--right">
+                                <nav class="site-footer__menu site-footer__menu--3">
+                                    <ul class="list list--reset list--close">
+                                        <li><a href="/press-office">Press office</a></li>
+                                        <li><a href="/freedom-of-information">Freedom of information</a></li>
+                                        <li><a href="/careers">Careers</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="site-footer__section site-footer__section--bottom">
+                    <div class="grid-wrapper grid-wrapper--collapse">
+                        <div class="grid-row">
+                            <div class="column column--left">
+                                <nav class="site-footer__menu site-footer__menu--4">
+                                    <ul class="list list--inline list--reset">
+                                        <li><a href="/legal" title="Legal">Legal</a></li>
+                                        <li><a href="/privacy-and-cookies" title="Privacy and cookies">Privacy and cookies</a></li>
+                                        <li><a href="/terms-and-conditions" title="Terms and conditions">Terms and conditions</a></li>
+                                        <li><a href="/accessibility" title="Accessibility help">Accessibility</a></li>
+                                        <li><a href="javascript: Cookiebot.renew()" title="Cookie consent">Cookie consent</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="site-footer__menu site-footer__menu--5">
+                                    <ul class="list list--inline list--reset">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    (function() {
+        var vjsUtils = window.vanillaJSUtils;
+        var oldBrowser = window.addEventListener ? false : true;
+        var $stickyNav = document.querySelectorAll('#sticky-nav')[0];
+
+        var $sidebarSection = document.querySelectorAll('.page-block--sidebar')[0];
+        var $mainSection = document.querySelectorAll('.page-block--main')[0];
+
+        if (typeof $stickyNav === 'undefined' || typeof $mainSection === 'undefined' || typeof $sidebarSection === 'undefined') {
+            return false;
+        }
+        var $sectionWrapper = $mainSection.parentNode;
+        var $navTitle = $stickyNav.querySelectorAll('.article-section-nav__title')[0];
+
+        var windowHeight = wrapperHeight = mainHeight = wrapperOffsetY = cachedScrollY = posY = navOffsetY = wrapperWidth = layoutWidth = 0;
+        var ticking = contentTallerThanNav = false;
+
+        var MODES = {
+            CONTAIN: 'CONTAIN',
+            OVERFLOW: 'OVERFLOW'
+        };
+        var mode = MODES.SMALL;
+
+        var BREAKPOINTS = {
+            DESKTOP_MIN: 924
+        };
+
+        var POSITIONS = {
+            STICKY_WINDOW_TOP: 'STICKY WINDOW TOP',
+            STICKY_CONTENT_BOTTOM: 'STICKY CONTENT BOTTOM',
+            STICKY_WINDOW_BOTTOM: 'STICKY WINDOW BOTTOM',
+            NATURAL_SCROLL: 'NATURAL SCROLL'
+        };
+        var position = POSITIONS.NATURAL_SCROLL;
+
+        function init() {
+            if (!oldBrowser) {
+                window.addEventListener('resize', handleResize, { passive: true });
+                window.addEventListener('scroll', handleScroll, { passive: true });
+            } else {
+                window.attachEvent('onresize', handleResize);
+                window.attachEvent('onscroll', handleScroll);
+            }
+
+            handleScroll();
+            handleResize();
+        }
+
+        function updateNav(scrollY) {
+            mode = windowHeight > wrapperHeight ? MODES.CONTAIN : MODES.OVERFLOW;
+
+            // Screnario 1 - Naturally scroll with the content until the top of the nav reaches the top of window
+            $stickyNav.style.position = 'relative';
+            posY = 0;
+            position = POSITIONS.NATURAL_SCROLL;
+
+            if (mode === MODES.CONTAIN) {
+                if (scrollY >= wrapperOffsetY + mainHeight - wrapperHeight) {
+                    // When reach the bottom of the content => stick to bottom of the content
+
+                    $stickyNav.style.position = 'relative';
+                    position = POSITIONS.STICKY_CONTENT_BOTTOM;
+
+                    if (contentTallerThanNav) {
+                        posY = mainHeight - wrapperHeight;
+                    }
+                } else if (scrollY >= wrapperOffsetY) {
+                    // Stick to top once reached the window top until
+
+                    $stickyNav.style.position = 'fixed';
+                    posY = -1 * wrapperOffsetY;
+                    position = POSITIONS.STICKY_WINDOW_TOP;
+                }
+            } else {
+                if (scrollY >= wrapperOffsetY + mainHeight - windowHeight) {
+                    // When reach the bottom of the content => stick to bottom of the content
+
+                    $stickyNav.style.position = 'relative';
+                    position = POSITIONS.STICKY_CONTENT_BOTTOM;
+
+                    if (contentTallerThanNav) {
+                        posY = mainHeight - wrapperHeight;
+                    }
+                } else if (scrollY >= wrapperOffsetY + wrapperHeight - windowHeight) {
+                    // When reach the bottom of the nav => stick to bottom of the window
+
+                    $stickyNav.style.position = 'fixed';
+                    position = POSITIONS.STICKY_WINDOW_BOTTOM;
+                    posY = -1 * (wrapperOffsetY + wrapperHeight - windowHeight);
+                }
+            }
+
+            applyPosY(posY);
+        }
+
+        function applyPosY(posY) {
+            var transform = 'translateY(' + posY + 'px)';
+            $stickyNav.style['-webkit-transform'] = transform;
+            $stickyNav.style['-moz-transform'] = transform;
+            $stickyNav.style['-o-transform'] = transform;
+            $stickyNav.style['-ms-transform'] = transform;
+            $stickyNav.style['transform'] = transform;
+        }
+
+        function scrollTop() {
+            return document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+        }
+
+        function handleResize() {
+            windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            navOffsetY = typeof $navTitle !== 'undefined' ? $navTitle.offsetTop : 0;
+            wrapperHeight = $stickyNav.offsetHeight;
+            mainHeight = $mainSection.offsetHeight;
+            wrapperOffsetY = $sectionWrapper.offsetTop;
+            contentTallerThanNav = mainHeight > wrapperHeight;
+            wrapperWidth = 'auto';
+            layoutWidth = document.body.clientWidth;
+
+            if (layoutWidth > BREAKPOINTS.DESKTOP_MIN) {
+                wrapperWidth = Math.round($stickyNav.parentNode.parentNode.offsetWidth * 0.333) + 'px';
+                cachedScrollY = scrollTop();
+                updateNav(cachedScrollY);
+            } else {
+                $stickyNav.style.position = 'relative';
+                applyPosY(0);
+            }
+
+            $stickyNav.style.width = wrapperWidth;
+        }
+
+        function handleScroll() {
+            if (layoutWidth > BREAKPOINTS.DESKTOP_MIN) {
+                cachedScrollY = scrollTop();
+
+                if (typeof window.requestAnimationFrame !== 'undefined') {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            updateNav(cachedScrollY);
+                            ticking = false;
+                        });
+
+                        ticking = true;
+                    }
+                } else {
+                    updateNav(cachedScrollY);
+                }
+            } else {
+                $stickyNav.style.position = 'relative';
+                cachedScrollY = 0;
+                updateNav(0);
+            }
+        }
+
+        init();
+    }());
+</script>
