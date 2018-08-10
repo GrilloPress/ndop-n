@@ -3,7 +3,7 @@ $(window).load(function() {
   preferenceChecker();
 });
 
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/B";
 
 function preferenceChecker() {
   var pref = sessionStorage.singlePref;

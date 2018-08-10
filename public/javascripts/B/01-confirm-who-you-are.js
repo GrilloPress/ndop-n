@@ -1,4 +1,4 @@
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/B";
 
     $(document).ready(function() {
       //Ensure checkbox is empty on page load

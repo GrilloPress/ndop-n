@@ -31,7 +31,7 @@ function checkDetails(isDayComplete, isMonthComplete, isYearComplete) {
 
   if (a && b && c) {
 
-    window.location.href = "v1/app/without-nhs-number/03-your-postcode";
+    window.location.href = "/B/app/without-nhs-number/03-your-postcode";
 
   } else {
 

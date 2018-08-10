@@ -1,6 +1,6 @@
 //Please enter your personal details page ---------------------------------------------------------------------------------
 //JQuery ------------------------------------------------------------------------------------------------------------------
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/B";
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));

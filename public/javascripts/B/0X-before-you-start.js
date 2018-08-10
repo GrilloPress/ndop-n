@@ -1,4 +1,4 @@
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/B";
 
 // resets preferences on the service start page on register your preference page
 //

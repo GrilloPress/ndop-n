@@ -3,4 +3,4 @@ $(window).load(function() {
   })
 });
 
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/B";
