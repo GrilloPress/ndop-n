@@ -24,7 +24,7 @@ function checkDetails(isPostCodeComplete) {
 
   if (a) {
 
-    window.location.href = "/v1/app/without-nhs-number/04-review-your-details";
+    window.location.href = "/A/app/without-nhs-number/04-review-your-details";
 
   }
 

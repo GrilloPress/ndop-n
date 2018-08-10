@@ -30,7 +30,7 @@ function checkDetails(isFirstNameComplete, isLastNameComplete) {
 
   if (a && b) {
 
-    window.location.href = "/v1/02-your-gender";
+    window.location.href = "/A/02-your-gender";
 
   }
 

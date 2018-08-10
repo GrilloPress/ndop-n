@@ -32,7 +32,7 @@ function submit() {
 
   } else {
 
-    window.location.href = "/v1/app/without-nhs-number/05-spinner";
+    window.location.href = "/A/app/without-nhs-number/05-spinner";
 
   }
 

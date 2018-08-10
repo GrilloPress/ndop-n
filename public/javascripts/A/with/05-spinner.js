@@ -1,4 +1,4 @@
-var THE_PROTOTYPE_URL = "/v1";
+var THE_PROTOTYPE_URL = "/A";
 
 $(document).ready(function(){
   window.setTimeout(function() {
