@@ -12,7 +12,7 @@ $(window).ready(function() {
 
   window.setTimeout(function() {
       alert("Your security code is 12345");
-  }, 5000);
+  }, 3500);
 })
 
 var confirmationType = localStorage.verificationOption;
