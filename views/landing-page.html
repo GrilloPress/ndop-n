@@ -1,7 +1,8 @@
 {% set title = 'Find out why your NHS data matters' %}
 {% block scripts %}
-
+<script src="/javascripts/{{PROTOTYPE_URL}}/splitter.js"></script>
 {% endblock %}
+{% set ANALYTICS_TRUE = 'True' %}
 {% extends 'layouts/layout.html' %}
 
 {% block body %}
@@ -33,7 +34,7 @@
         </p>
 
         <p>
-          <a onclick="console.log('hi')" role="button" class="button" href="#">Start now</a>
+          <a onclick="split();" role="button" class="button" href="#">Start now</a>
         </p>
       </div>
 
