@@ -9,6 +9,10 @@ $(window).ready(function() {
   // Animation complete
   });
   otpMethod();
+
+  window.setTimeout(function() {
+      alert("Your security code is 12345");
+  }, 5000);
 });
 
 var confirmationType = localStorage.verificationOption;
