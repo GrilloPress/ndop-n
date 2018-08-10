@@ -98,12 +98,12 @@ router.get('/A/00-other-ways-to-manage-your-choice', function(req, res, next) {
 
 // GET v1 index page.
 router.get('/B/01-overview', function(req, res, next) {
-  res.render( 'B/app/how-to-manage-your-choice-online' );
+  res.render( 'B/app/01-do-you-have-your-nhs-number' );
 });
 
 // GET v1 index page.
 router.get('/B/app/index', function(req, res, next) {
-  res.render( 'B/app/how-to-manage-your-choice-online' );
+  res.render( 'B/app/01-do-you-have-your-nhs-number' );
 });
 
 // GET v1 index page.
