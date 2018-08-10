@@ -11,7 +11,7 @@ $(window).ready(function() {
   otpMethod();
 
   window.setTimeout(function() {
-      alert("Your security code is 30028");
+      alert("Your security code is 12345");
   }, 5000);
 })
 
