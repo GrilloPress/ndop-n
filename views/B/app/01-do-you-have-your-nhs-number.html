@@ -1,9 +1,10 @@
-{% set title = 'How would you like to confirm your identity? - Find out why your NHS data matters' %}
-{% set content_title = 'How would you like to confirm your identity?' %}
+{% set title = 'Do you know your NHS number? - Find out why your NHS data matters' %}
+{% set content_title = 'Do you know your NHS number?' %}
 {% set PROTOTYPE_URL = 'B' %}
 {% set ANALYTICS_TRUE = 'True' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/00-how-would-you-like-to-confirm-your-identity.js"></script>
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -36,9 +37,8 @@
                               <p class="error-text error-label">Indicate your choice to continue</p>
                             </div>
 
-                            <p>
-                              For security reasons you must confirm who you are before you can manage your choice.
-                            </p>
+                            <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
+                            <span class="form-label__hint">You can find this on any letter sent to you by the NHS, on a prescription or by logging in to a GP practice online service</span>
                             </div>
 
                             <input type="radio" name="auth" id="nhs-number-journey" value="nhs-number-journey" class="multiple-choice--radio">
@@ -56,10 +56,31 @@
 
                       <input type="submit" class="button" id="submit-details" value="Continue">
 
-                      <p>
-                        <a href="/{{PROTOTYPE_URL}}/00-privacy-notice" target="_blank">How your data will be processed to register and apply your opt-out<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window).</span>
-                      </p>
+
                   </form>
+
+                  <details class="" role="group">
+                    <summary role="button">
+                      <span class="details__summary">Where you can find your NHS number</span>
+                    </summary>
+                    <div class="details__content">
+                      <div class="reading-width">
+                        <p>
+                          An NHS number is a 10 digit number, like 485 777 3456.
+                        </p>
+                        <p>You can find your NHS number by logging in to a GP practice online service or on any document sent to you by the NHS. This may include:</p>
+                        <ul>
+                          <li>prescriptions</li>
+                          <li>test results</li>
+                          <li>hospital referral letters</li>
+                          <li>appointment letters</li>
+                        </ul>
+                        <p>
+                          You can also ask your GP practice for help if you can't find your NHS number.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
               </div>
       </div>
   </div>
