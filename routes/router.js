@@ -82,32 +82,32 @@ router.get('/v1/00-other-ways-to-manage-your-choice', function(req, res, next) {
 });
 
 // GET v1 index page.
-router.get('/v2/01-overview', function(req, res, next) {
-  res.render( 'v2/app/how-to-manage-your-choice-online' );
+router.get('/A/01-overview', function(req, res, next) {
+  res.render( 'A/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
-router.get('/v2/app/index', function(req, res, next) {
-  res.render( 'v2/app/how-to-manage-your-choice-online' );
+router.get('/A/app/index', function(req, res, next) {
+  res.render( 'A/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
-router.get('/v2/00-other-ways-to-manage-your-choice', function(req, res, next) {
+router.get('/A/00-other-ways-to-manage-your-choice', function(req, res, next) {
   res.render( 'release/00-other-ways-to-manage-your-choice' );
 });
 
 // GET v1 index page.
-router.get('/v3/01-overview', function(req, res, next) {
-  res.render( 'v3/app/how-to-manage-your-choice-online' );
+router.get('/B/01-overview', function(req, res, next) {
+  res.render( 'B/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
-router.get('/v3/app/index', function(req, res, next) {
-  res.render( 'v3/app/how-to-manage-your-choice-online' );
+router.get('/B/app/index', function(req, res, next) {
+  res.render( 'B/app/how-to-manage-your-choice-online' );
 });
 
 // GET v1 index page.
-router.get('/v3/00-other-ways-to-manage-your-choice', function(req, res, next) {
+router.get('/B/00-other-ways-to-manage-your-choice', function(req, res, next) {
   res.render( 'release/00-other-ways-to-manage-your-choice' );
 });
 
