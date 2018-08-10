@@ -68,7 +68,7 @@ function submitCode() {
     // if 999 handle as error?
 
   }else {
-    window.location.href = THE_PROTOTYPE_URL + "/app/05-set-your-preference";
+    window.location.href = THE_PROTOTYPE_URL + "/end";
   }
 
 }
