@@ -1,0 +1,55 @@
+{% set title = 'Your postcode - Find out why your NHS data matters' %}
+{% set content_title = 'Your postcode' %}
+{% set PROTOTYPE_URL = 'B' %}
+{% set ANALYTICS_TRUE = 'True' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/without/change/03-your-postcode.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+                <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+                  <h2 class="h3" id="error-summary">To use this online service, resolve the following errors</h2>
+                  <ul class="link-list" id="link-to-errors">
+                  </ul>
+                </div>
+                  <form action="javascript:submit()">
+                    <h1 class="h2">
+                      <label for="postcode">{{content_title}}</label>
+                    </h1>
+                    <div class="grid-row">
+                      <div class="column--three-quarters">
+                        <div id="postcode">
+                          <div class="form-row">
+
+                            <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
+                            <span class="form-label__hint">For example, 'LS1 6AE'</span>
+                            <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                      <input type="submit" class="button" id="submit-details" value="Continue">
+                  </form>
+
+                  <p>
+                    <a href="javascript: history.go(-1)">Go back </a>
+                  </p>
+
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

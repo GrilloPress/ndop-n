@@ -1,0 +1,32 @@
+{% set title = 'Make your choice - Find out why your NHS data matters' %}
+{% set content_title = 'Make your choice' %}
+{% set PROTOTYPE_URL = 'A' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/without/05-spinner.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--one-third">
+          <div class="container--loader">
+            <div id="waitingForData" class="loader">
+            </div>
+            <p>
+              Searching for your details ...
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% set title = 'Your NHS Number - Find out why your NHS data matters' %}
+{% set content_title = 'Your NHS Number' %}
+{% set PROTOTYPE_URL = 'A' %}
+
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/with/03-your-nhs-number.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+                <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+                  <h2 class="h3" id="error-summary">To use this online service, resolve the following errors</h2>
+                  <ul class="link-list" id="link-to-errors">
+                  </ul>
+                </div>
+                  <form action="javascript:submit()">
+
+                        <div id="nhs-number">
+                            <h1 class="h2">
+                              <label for="nhs-number">{{content_title}}</label>
+                            </h1>
+
+                            <div class="grid-row">
+                              <div class="column--three-quarters">
+
+
+                            <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
+                            <p class="error error-message error-text error-label" id="nhs-number-error">Please enter your NHS Number</p>
+                            <input autocomplete="off" type="text" id="nhs-number-input" name="nhs-number" value="" class="-small form-control">
+                          </div>
+                        </div>
+
+                    </div>
+
+                      <input type="submit" class="button" id="submit-details" value="Continue">
+                  </form>
+
+                  <p>
+                    <a href="javascript: history.go(-1)">Go back </a>
+                  </p>
+
+
+              </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

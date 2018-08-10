@@ -1,0 +1,60 @@
+{% set title = 'How to manage your choice online - Find out why your NHS data matters' %}
+{% set content_title = 'How to manage your choice online' %}
+{% set PROTOTYPE_URL = 'A' %}
+{% block scripts %}
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--full">
+              <div class="callout callout--interruption alt">
+                <h1 class="h2">{{content_title}}</h1>
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <div class="reading-width">
+                      <p>
+                        Tell us your name, date of birth and NHS number or postcode.
+                      </p>
+                      <p>
+                        If we find your contact details, we'll then send you a security code. When your code is verified, you will be able to manage your choice online.
+                      </p>
+
+                        <a href="/{{PROTOTYPE_URL}}/app/details/01-your-name" class="button">Continue</a>
+                      <p>
+                        <a href="/{{PROTOTYPE_URL}}/00-privacy-notice" target="_blank">How your data will be processed to register and apply your opt-out<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window).</span>
+                      </p>
+                    </div>
+
+                  </div>
+                  <div class="column--one-quarter tablet">
+                    <img alt="" class="util-displaynone-mobile" width="100%" src="/images/choice-icon-white.svg" />
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--three-quarters">
+          {{ patterns.page_nav( "Before you start", "/release" + "/05-manage-your-choice#before-you-start", "", "" ) }}
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
