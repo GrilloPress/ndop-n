@@ -2384,7 +2384,8 @@ p {
       clear: both; } }
 
 .form-label--radio {
-  font-weight: normal; }
+  font-weight: normal;
+  margin-top: 8px; }
 
 .form-label--inline {
   margin-right: 1.5rem; }
@@ -2440,7 +2441,6 @@ p {
     outline: 3px solid #ffb81c; }
 
 .multiple-choice--checkbox {
-  position: absolute;
   opacity: 0; }
   .multiple-choice--checkbox + label {
     position: relative;
@@ -2533,10 +2533,10 @@ p {
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-  position: absolute;
   height: 2px;
   width: 2px;
-  opacity: 0; }
+  opacity: 0;
+  margin-top: 0; }
 
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label {
@@ -2560,7 +2560,7 @@ p {
   content: '';
   width: 20px;
   height: 20px;
-  background: black;
+  background: transparent;
   position: absolute;
   top: 7px;
   left: 7px;
@@ -2573,6 +2573,7 @@ p {
 
 [type="radio"]:checked + label:after {
   opacity: 1;
+  background: #231f20;
   -webkit-transform: scale(1);
   transform: scale(1); }
 

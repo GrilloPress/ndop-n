@@ -1,7 +1,7 @@
 // Checkbox
 
 .multiple-choice--checkbox {
-  position: absolute; // take it out of document flow
+  // position: absolute; // take it out of document flow
   opacity: 0; // hide it
 
   & + label {
@@ -133,10 +133,12 @@
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-    position: absolute;
+    // position: absolute;
     height: 2px;
     width: 2px;
     opacity: 0;
+    margin-top: 0;
+
 }
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label
@@ -162,7 +164,7 @@
     content: '';
     width: 20px;
     height: 20px;
-    background: black;
+    background: transparent;
     position: absolute;
     top: 7px;
     left: 7px;
@@ -175,6 +177,7 @@
 }
 [type="radio"]:checked + label:after {
     opacity: 1;
+    background: $black;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
