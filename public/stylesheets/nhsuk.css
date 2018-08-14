@@ -1683,17 +1683,16 @@ table {
   letter-spacing: .8px; }
   .button:hover, a.button:hover {
     background-color: #004c23; }
-  .button:active, .button:focus, a.button:active, a.button:focus {
+  .button:focus, a.button:focus {
     background-color: #00662f;
     border-color: #ffb81c;
     box-shadow: 0 0 0 4px #ffb81c;
     -webkit-transition: all .1s;
     -o-transition: all .1s;
-    transition: all .1s; }
-  .button:focus, .button:active, a.button:focus, a.button:active {
-    border-color: #ffb81c;
-    box-shadow: 0 0 0 4px #ffb81c;
+    transition: all .1s;
     border-radius: 0; }
+  .button:active, a.button:active {
+    background-color: #00662f; }
   .button:visited, a.button:visited {
     color: #fff; }
   @media (max-width: 640px) {

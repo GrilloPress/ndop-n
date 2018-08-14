@@ -30,7 +30,6 @@
     background-color: darken($green, 10%);
 
   }
-  &:active,
   &:focus {
     background-color: darken($green, 5%);
     border-color: $focus-colour;
@@ -38,13 +37,12 @@
     -webkit-transition: all .1s;
     -o-transition: all .1s;
     transition: all .1s;
+    border-radius: 0;
   }
 
-  &:focus,
   &:active {
-    border-color: $focus-colour;
-    box-shadow: 0 0 0 4px $focus-colour;
-    border-radius: 0;
+    background-color: darken( $green, 5% );
+
   }
 
   &:visited {
