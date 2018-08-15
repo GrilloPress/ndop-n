@@ -91,3 +91,85 @@ thead {
     font-weight: 800;
   }
 }
+
+// page page
+
+.page-band {
+
+  background-color: $blue;
+  padding: 16px 0;
+  color: white;
+  margin-bottom: 32px;
+
+  @include media(desktop){
+
+    margin-bottom: 46px;
+  }
+
+  a {
+
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+
+      color: $black;
+      background-color: $yellow;
+    }
+  }
+}
+
+
+.workflow {
+
+  padding: 0 0 1em 0;
+
+  p {
+
+    max-width: 580px;
+  }
+
+  ol {
+    counter-reset:li;
+    margin-left:0;
+    padding-left:0;
+
+    li {
+
+      position:relative;
+      list-style:none;
+      margin: 1em 0 6px 2em;
+      padding: 16px 6px;
+      clear: both;
+
+      a.button {
+
+        @include media(desktop){
+
+          float: right;
+        }
+      }
+
+      &:before {
+
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        top: 12px;
+        left: -2.5em;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 38px;
+        margin-right: 8px;
+        border: 1px solid $black;
+        color: $white;
+        background: $blue;
+        text-align: center;
+        padding: 3px;
+        border-radius: 50%;
+
+      }
+    }
+  }
+}
