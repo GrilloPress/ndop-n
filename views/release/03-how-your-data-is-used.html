@@ -2,103 +2,137 @@
 {% set content_title = "How your data is used" %}
 {% set PROTOTYPE_URL = 'release' %}
 {% block scripts %} {% endblock %}
-{% extends 'layouts/choices.html' %}
+{% extends 'layouts/live.html' %}
 
 {% block body %}
-<div class="breadcrumb" aria-label="breadcrumb">
-  <ol>
-    <li><a href="#">Home</a></li>
-    <li><a href="/{{PROTOTYPE_URL}}/01-overview">Find out why your data matters</a></li>
-    <li class="breadcrumb__last">{{content_title}}</li>
-  </ol>
-</div>
+<nav class="nhsuk-c-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-o-width-container">
+    <ol class="nhsuk-c-breadcrumb__list">
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="#" class="nhsuk-c-breadcrumb__link">Home</a>
+              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                <image class="nhsuk-icon__chevron-right nhsuk-icon__chevron-right--fallback" src="/static/nhsuk_shared/img/icon-chevron-right-grey.f562fde428e8.png" xlink:href="">
+              </image></svg>
+          </li>
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__link">Find out why your data matters</a>
+          </li>
+    </ol>
 
-<main id="content" role="main">
-  <div class="page-section">
-    <div class="grid-row">
-      <div class="column--two-thirds">
-        <h1 class="page-title__NHSUK">{{content_title}} <small>Find out why your data matters</small></h1>
-      </div>
-    </div>
-
-    <div class="page-links__container">
-      <div class="grid-row">
-        <div class="column--one-third">
-          <ol>
-            <li>
-              <a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a>
-            </li>
-            <li>
-              <a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a>
-            </li>
-            <li>{{content_title}}</li>
-          </ol>
-        </div>
-        <div class="column--one-third">
-          <ol start="4">
-            <li>
-              <a href="/{{PROTOTYPE_URL}}/04-how-data-is-protected">How data is protected</a>
-            </li>
-            <li>
-              <a href="/{{PROTOTYPE_URL}}/04-manage-your-choice">Manage your choice</a>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
+    <p class="nhsuk-c-breadcrumb__back">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        <image class="nhsuk-icon__chevron-left nhsuk-icon__chevron-left--fallback" src="/static/nhsuk_shared/img/icon-chevron-left-blue.18f54059387e.png" xlink:href="">
+      </image></svg>
+      <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__backlink">Back to Find out why your data matters</a></p>
   </div>
-  <div class="page-section">
+</nav>
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Find out why your data matters</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-manage-your-choice">Manage your choice</a></li>
+          </ol>
+        </nav>
+    </div>
+
     <div class="reading-width">
-      <div class="grid-row">
-        <div class="column--two-thirds">
-          <h2 id="who-can-use-your-data" class="h3">Who can use your data</h2>
-          <p>
-            The NHS collects health and care data from all NHS organisations, trusts and local authorities. Data is also collected from private organisations, such as private hospitals providing NHS funded care. Research bodies and organisations can request access to this data.
-          </p>
-          <p>
-            Research bodies and organisations include:
-          </p>
-          <ul>
-            <li>
-              university researchers
-            </li>
-            <li>
-              hospital researchers
-            </li>
-            <li>
-              medical royal colleges
-            </li>
-            <li>
-              pharmaceutical companies researching new treatments
-            </li>
-          </ul>
-          <h2 id="who-cant-use-your-data" class="h3">Who can't use your data</h2>
-          <p>
-            Confidential patient information is used to support the delivery of health and social care.
-          </p>
-          <p>
-            Access to confidential patient information will <strong>not</strong> be given for:
-          </p>
-          <ul>
-            <li>
-              marketing purposes
-            </li>
-            <li>
-              insurance purposes
-            </li>
-          </ul>
-          <p>(unless you specifically request this).</p>
-          <h2 id="how-your-data-is-used" class="h3">How your data is used</h2>
-          <p>You can access the Data Release Register to find out how your data has been used by NHS Digital, for purposes beyond your individual care.</p>
-          <p><a target="_blank" rel="noopener noreferrer" href="https://digital.nhs.uk/services/data-access-request-service-dars/register-of-approved-data-releases">NHS Digital Data Release Register<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
-          <p><a target="_blank" rel="noopener noreferrer" href="https://ico.org.uk/">More information on your data rights<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <p>
+              The NHS collects health and care data from all NHS organisations, trusts and local authorities. Data is also collected from private organisations, such as private hospitals providing NHS funded care. Research bodies and organisations can request access to this data.
+            </p>
+            <p>
+              Research bodies and organisations include:
+            </p>
+            <ul>
+              <li>
+                university researchers
+              </li>
+              <li>
+                hospital researchers
+              </li>
+              <li>
+                medical royal colleges
+              </li>
+              <li>
+                pharmaceutical companies researching new treatments
+              </li>
+            </ul>
+            <h2 id="who-cant-use-your-data" class="h3">Who can't use your data</h2>
+            <p>
+              Confidential patient information is used to support the delivery of health and social care.
+            </p>
+            <p>
+              Access to confidential patient information will <strong>not</strong> be given for:
+            </p>
+            <ul>
+              <li>
+                marketing purposes
+              </li>
+              <li>
+                insurance purposes
+              </li>
+            </ul>
+            <p>(unless you specifically request this).</p>
+            <h2 id="how-your-data-is-protected" class="h3">How your data is protected</h2>
+            <p>
+              Protection of your confidential patient information is taken very seriously and is looked after in accordance with good practice and the law.
+            </p>
+            <p>
+              Every organisation that provides health and care services will take every step to:
+            </p>
+            <ul>
+              <li>
+                ensure data remains secure
+              </li>
+              <li>
+                use anonymised data whenever possible
+              </li>
+              <li>
+                use confidential patient information to benefit health and care
+              </li>
+              <li>
+                not use confidential patient information for marketing or insurance purposes (unless you specifically request this)
+              </li>
+              <li>
+                make it clear why and how data is being used
+              </li>
+              <li>
+                respect your decision if you decide to opt out
+              </li>
+              <li>
+                only use information about you where allowed by the law
+              </li>
+            </ul>
+            <p>All NHS organisations must provide information on the type of data they collect and how it is used. Data release registers are published by NHS Digital and Public Health England, showing records of the data they have shared with other organisations.</p>
+            <p><a target="_blank" rel="noopener noreferrer" href="https://digital.nhs.uk/services/data-access-request-service-dars/register-of-approved-data-releases">NHS Digital Data Release Register<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
 
-  <div class="page-section">
+            <p><a target="_blank" rel="noopener noreferrer" href="https://www.gov.uk/government/collections/public-health-england-data-release-register">Public Health England data release register<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
+
+            <p><a target="_blank" rel="noopener noreferrer" href="https://ico.org.uk/">More information on your data rights<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
+
+            <p><a target="_blank" rel="noopener noreferrer" href="https://understandingpatientdata.org.uk/how-data-kept-safe">More information on how we protect your information<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window)</span>.</p>
+
+        </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
     <div class="reading-width">
       <div class="grid-row">
         <div class="column--two-thirds">
@@ -106,7 +140,8 @@
         </div>
       </div>
     </div>
-  </div>
-</main>
+
+  </main>
+</div>
 
 {% endblock %}
