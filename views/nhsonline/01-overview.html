@@ -1,0 +1,89 @@
+{% set title = 'Overview - Manage your data choice' %}
+{% set content_title = "Overview" %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/app.html' %}
+{% block body %}
+
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">Overview<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">Overview</span></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a></li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <p>
+            The NHS wants to make sure you and your family have the best care now and in the future. Your health and adult social care information supports your individual care. It also helps us to research, plan and improve health and care services in England.
+          </p>
+          <p>
+            Unless you have chosen to opt out, your confidential patient information can be used for research and planning. This online service allows you to make or change your decision at any time. You can also download a form to manage a choice on behalf of another individual by proxy. For example, if you are a parent or guardian of a child under the age of 13.
+          </p>
+          <p>
+            <a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a> or continue reading for more information.
+          </p>
+          <h2 class="h3" id="your-confidential-patient-information">Your confidential patient information</h2>
+          <p>
+            Confidential patient information identifies you and says something about your health care or treatment. Information that only identifies you like your name and address is not confidential patient information.
+          </p>
+          <h2 class="h3" id="using-your-confidential-patient-information">Using your confidential patient information</h2>
+          <p>
+            Your confidential patient information is used in two different ways:
+          </p>
+          <h3 id="your-individual-care" class="h4">Your individual care</h3>
+          <p>Health and care professionals may use your confidential patient information to help with your treatment and care.
+          </p>
+          <p>For example, when you visit your GP, they may access your records for important information about your health.</p>
+
+          <h3 id="research-and-planning" class="h4">Research and planning</h3>
+          <p>Confidential patient information is also used to:</p>
+          <ul>
+            <li>
+              plan and improve health and care services
+            </li>
+            <li>
+              research and develop cures for serious illnesses
+            </li>
+          </ul>
+          <p>
+            Most of the time, we use anonymised data for research and planning. So your confidential patient information isn’t always needed.
+          </p>
+
+          <h2 class="h3" id="where-you-have-a-choice">Where you have a choice</h2>
+          <p>
+            If you don’t want your confidential patient information to be used for research and planning, you can opt out of this. Your confidential patient information will still be used to support your individual care. Any choice you set using this service will not change this.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "", "", "Benefits of data sharing", "/" + PROTOTYPE_URL + "/02-benefits-of-data-sharing" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

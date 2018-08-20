@@ -1,0 +1,73 @@
+{% set title = 'Manage your choice - Manage your data choice' %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% set content_title = "Manage your choice" %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="reading-width">
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <p>
+              Use this service to request that your confidential patient information is not used beyond your own individual care.
+            </p>
+            <p>
+              If you decide to opt out, this will be respected and applied by NHS Digital and Public Health England. These organisations collect, process and release health and adult social care data on a national basis. Your decision will also be respected and applied by all other organisations that are responsible for health and care information by March 2020.
+            </p>
+            <p>
+              An opt-out will only apply to the health and care system in England. This does not apply to your health data where you have accessed health or care services outside of England, such as in Scotland and Wales.
+            </p>
+            <p>
+              If you choose to opt out, your data may still be used during some specific situations. For example, during an epidemic where there might be a risk to other people’s health.
+            </p>
+            <p>
+              <a role="button" class="button" aria-label="Start the online 'manage your choice' service" href="https://your-data-matters.service.nhs.uk/">Start now</a>
+            </p>
+
+            <h2 class="h3" id="other-ways-to-manage-your-choice">Other ways to manage your choice </h2>
+            <p>
+              If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">other ways to manage your choice</a>.
+            </p>
+          </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "Where an opt-out doesn't apply", "/" + PROTOTYPE_URL + "/04-where-opt-outs-dont-apply", "", "" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

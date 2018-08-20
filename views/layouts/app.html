@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  {% include "partials/_app_header.html" %}
+  {% import "partials/_macros.html" as patterns %}
+  {% block scripts %}{% endblock %}
+</head>
+<body class="{% if PROTOTYPE_URL %}{{ PROTOTYPE_URL }}{% endif %}">
+
+
+    {% block body %}{% endblock %}
+    {% if SUBFOOTER_TRUE %}
+      {% include "partials/_choices_local_footer.html" %}
+    {% endif %}
+
+    {% include "partials/_analytics.html" %}
+
+  </body>
+</html>

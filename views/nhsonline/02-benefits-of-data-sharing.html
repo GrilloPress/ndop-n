@@ -1,0 +1,90 @@
+{% set title = 'Benefits of data sharing - Manage your data choice' %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% set content_title = "Benefits of data sharing" %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a></li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="reading-width">
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <h2 id="research">Research</h2>
+            <ul>
+              <li>
+                Prevent serious illness
+              </li>
+              <li>
+                Develop new treatments
+              </li>
+              <li>
+                Learn more about diseases
+              </li>
+            </ul>
+            <p>
+              Your confidential patient information provides numerous benefits. It is used in research to find cures and better treatments for diseases like diabetes and cancer.
+            </p>
+            <p>
+              With your data, we are better able to develop and improve health and care services for the future.
+            </p>
+
+            <h2 id="planning">Planning</h2>
+            <ul>
+              <li>
+                Plan NHS health services
+              </li>
+              <li>
+                Make services safer
+              </li>
+              <li>
+                Improving quality of care
+              </li>
+            </ul>
+            <p>
+              Confidential patient information can also be used to plan health and care services more effectively. The NHS and local authorities can plan where they need to provide further care services more efficiently.
+            </p>
+            <p>
+              This helps to improve health and social care for you and your family.
+            </p>
+
+        </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "Overview", "/" + PROTOTYPE_URL + "/01-overview", "How your data is used", "/" + PROTOTYPE_URL + "/03-how-your-data-is-used" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

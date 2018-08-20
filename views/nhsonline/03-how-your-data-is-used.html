@@ -1,0 +1,118 @@
+{% set title = 'How your data is used - Manage your data choice' %}
+{% set content_title = "How your data is used" %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% block scripts %} {% endblock %}
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a></li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="reading-width">
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <p>
+              The NHS collects health and care data from all NHS organisations, trusts and local authorities. Data is also collected from private organisations, such as private hospitals providing NHS funded care. Research bodies and organisations can request access to this data.
+            </p>
+            <p>
+              Research bodies and organisations include:
+            </p>
+            <ul>
+              <li>
+                university researchers
+              </li>
+              <li>
+                hospital researchers
+              </li>
+              <li>
+                medical royal colleges
+              </li>
+              <li>
+                pharmaceutical companies researching new treatments
+              </li>
+            </ul>
+            <h2 id="who-cant-use-your-data" class="h3">Who can't use your data</h2>
+            <p>
+              Confidential patient information is used to support the delivery of health and social care.
+            </p>
+            <p>
+              Access to confidential patient information will <strong>not</strong> be given for:
+            </p>
+            <ul>
+              <li>
+                marketing purposes
+              </li>
+              <li>
+                insurance purposes
+              </li>
+            </ul>
+            <p>(unless you specifically request this).</p>
+            <h2 id="how-your-data-is-protected" class="h3">How your data is protected</h2>
+            <p>
+              Protection of your confidential patient information is taken very seriously and is looked after in accordance with good practice and the law.
+            </p>
+            <p>
+              Every organisation that provides health and care services will take every step to:
+            </p>
+            <ul>
+              <li>
+                ensure data remains secure
+              </li>
+              <li>
+                use anonymised data whenever possible
+              </li>
+              <li>
+                use confidential patient information to benefit health and care
+              </li>
+              <li>
+                not use confidential patient information for marketing or insurance purposes (unless you specifically request this)
+              </li>
+              <li>
+                make it clear why and how data is being used
+              </li>
+              <li>
+                respect your decision if you decide to opt out
+              </li>
+              <li>
+                only use information about you where allowed by the law
+              </li>
+            </ul>
+            <p>All NHS organisations must provide information on the type of data they collect and how it is used. Data release registers are published by NHS Digital and Public Health England, showing records of the data they have shared with other organisations.</p>
+
+        </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "Benefits of data sharing", "/" + PROTOTYPE_URL + "/02-benefits-of-data-sharing", "Where an opt-out doesn't apply", "/" + PROTOTYPE_URL + "/04-where-opt-outs-dont-apply" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
