@@ -7404,4 +7404,59 @@ $grey-5
   z-index: 5;
   box-shadow: 0em -0.1em 0.2em rgba(0, 0, 0, 0.1); }
 
+.in-app {
+  padding: 1em 0 3.125em 0;
+  margin: 0 -16px;
+  min-height: 680px; }
+  .in-app h2 {
+    font-family: "FrutigerLTW01-65Bold", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.375em;
+    line-height: 1.375em;
+    color: #005EB8;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em; }
+  .in-app p {
+    display: block;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #212B32; }
+  .in-app ul.list-menu li {
+    box-sizing: border-box;
+    background: #f0f4f5 url(https://nhsa-private.herokuapp.com/img/icon_arrow_left.svg) no-repeat center right;
+    background-position: right 1em center;
+    position: relative;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    padding: 0.5em 5em 0.5em 1em;
+    border-bottom: 1px #D8DDE0 solid; }
+  .in-app ul.list-menu {
+    border-top: 1px #D8DDE0 solid;
+    list-style: none;
+    padding-left: 0; }
+  .in-app .info, .in-app .form, .in-app .panel, .in-app .list-menu {
+    font-size: 1em;
+    margin-bottom: 1em; }
+  .in-app a {
+    display: block;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #212B32;
+    color: #005EB8;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle; }
+  .in-app ul.list-menu li a {
+    font-size: 1em; }
+  .in-app ul.list-menu li a h2 {
+    margin: 0em; }
+  .in-app .info p, .in-app .list-menu li p {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    margin-top: 0; }
+
 /*# sourceMappingURL=app.css.map */
