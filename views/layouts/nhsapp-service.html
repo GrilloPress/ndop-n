@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="nhsapp">
+<head>
+  {% include "partials/_header.html" %}
+  {% import "partials/_macros.html" as patterns %}
+  {% block scripts %}{% endblock %}
+  <script src="/javascripts/cookie.js"></script>
+</head>
+<body class="{% if PROTOTYPE_URL %}{{ PROTOTYPE_URL }}{% endif %}">
+
+    {% block body %}{% endblock %}
+    {% include "partials/_analytics.html" %}
+
+  </body>
+</html>
