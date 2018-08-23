@@ -2320,17 +2320,17 @@ input::-webkit-inner-spin-button {
 fieldset .no-margin {
   margin-top: 0 !important; }
 
-.-date div {
-  display: inline-block;
-  padding-right: 1em;
-  margin-top: 5px; }
-
-.-date .day,
-.-date .month {
-  width: 3em; }
-
-.-date .year {
-  width: 4em; }
+.-date {
+  -moz-appearance: textfield; }
+  .-date div {
+    display: inline-block;
+    padding-right: 1em;
+    margin-top: 5px; }
+  .-date .day,
+  .-date .month {
+    width: 3em; }
+  .-date .year {
+    width: 4em; }
 
 .has-error .help-block {
   color: #da291c; }
@@ -3354,6 +3354,12 @@ small.stepper {
   height: 120px;
   animation: spin 2s linear infinite;
   margin: auto; }
+  .loader.mobile {
+    border: 3px solid #e1e9eb;
+    border-top: 3px solid #005eb8;
+    width: 50px;
+    height: 50px;
+    margin-top: 64px; }
 
 @keyframes spin {
   0% {
@@ -3363,6 +3369,78 @@ small.stepper {
 
 .container--loader {
   text-align: center; }
+
+.nhs-checkboxes__item {
+  display: block;
+  position: relative;
+  clear: left;
+  margin-top: 16px; }
+
+.nhs-checkboxes__item:last-child,
+.nhs-checkboxes__item:last-of-type {
+  margin-bottom: 0; }
+
+.nhs-checkboxes__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 0; }
+
+.nhs-checkboxes__label {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+  cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  padding: 8px 54px 5px; }
+
+.nhs-checkboxes__hint {
+  display: block; }
+
+.nhs-checkboxes__input + .nhs-checkboxes__label::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #005eb8;
+  background: transparent; }
+
+.nhs-checkboxes__input + .nhs-checkboxes__label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 7px;
+  width: 18px;
+  height: 7px;
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 3px 3px;
+  border-top-color: transparent;
+  opacity: 0;
+  background: transparent; }
+
+.nhs-checkboxes__input:focus + .nhs-checkboxes__label::before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #ffb81c; }
+
+.nhs-checkboxes__input:checked + .nhs-checkboxes__label::after {
+  opacity: 1; }
+
+.nhs-checkboxes__input:disabled,
+.nhs-checkboxes__input:disabled + .nhs-checkboxes__label {
+  cursor: default; }
+
+.nhs-checkboxes__input:disabled + .nhs-checkboxes__label {
+  opacity: .5; }
 
 html {
   box-sizing: border-box; }
