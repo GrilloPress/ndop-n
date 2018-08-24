@@ -1,7 +1,5 @@
 .-date {
 
-  -moz-appearance: textfield;
-
   div {
     display: inline-block;
     padding-right: 1em;
@@ -11,10 +9,12 @@
   .day,
   .month {
     width: 3em;
+    -moz-appearance: textfield;
   }
 
   .year {
     width: 4em;
+    -moz-appearance: textfield;
   }
 
 }

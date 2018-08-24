@@ -70,59 +70,6 @@
 
 }
 
-// Hack to give the checkbox space below it and the looooooong checkbox text a container so as not to flow around it
-
-.checkbox-container {
-
-  @include media(tablet) {
-
-    min-height: 80px;
-  }
-
-  @include media(desktop) {
-
-    min-height: 100px;
-  }
-
-  @include media(mobile) {
-
-    min-height: 164px;
-  }
-
-  .checkbox-long-text {
-
-    width: 90%;
-    float: right;
-
-
-    @include media(mobile) {
-
-      width: 80%;
-
-    }
-
-  }
-
-}
-
-.checkbox-container-has-error {
-
-  @include media(tablet) {
-
-    min-height: 180px;
-  }
-
-  @include media(desktop) {
-
-    min-height: 200px;
-  }
-
-  @include media(mobile) {
-
-    min-height: 290px;
-  }
-}
-
 // Radio Buttons
 
 [type="radio"]{
@@ -133,11 +80,12 @@
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-    // position: absolute;
-    height: 2px;
-    width: 2px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
     opacity: 0;
     margin-top: 0;
+    z-index: 1;
 
 }
 [type="radio"]:checked + label,

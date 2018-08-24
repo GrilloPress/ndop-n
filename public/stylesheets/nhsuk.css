@@ -2385,7 +2385,7 @@ p {
 
 .form-label--radio {
   font-weight: normal;
-  margin-top: 8px; }
+  margin-top: 16px; }
 
 .form-label--inline {
   margin-right: 1.5rem; }
@@ -2497,46 +2497,17 @@ p {
 .checkbox-blue + label:before {
   display: inline-block; }
 
-@media (min-width: 641px) {
-  .checkbox-container {
-    min-height: 80px; } }
-
-@media (min-width: 925px) {
-  .checkbox-container {
-    min-height: 100px; } }
-
-@media (max-width: 640px) {
-  .checkbox-container {
-    min-height: 164px; } }
-
-.checkbox-container .checkbox-long-text {
-  width: 90%;
-  float: right; }
-  @media (max-width: 640px) {
-    .checkbox-container .checkbox-long-text {
-      width: 80%; } }
-
-@media (min-width: 641px) {
-  .checkbox-container-has-error {
-    min-height: 180px; } }
-
-@media (min-width: 925px) {
-  .checkbox-container-has-error {
-    min-height: 200px; } }
-
-@media (max-width: 640px) {
-  .checkbox-container-has-error {
-    min-height: 290px; } }
-
 [type="radio"]:focus + label:before {
   box-shadow: 0 0 0 5px #ffb81c; }
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-  height: 2px;
-  width: 2px;
+  position: absolute;
+  height: 20px;
+  width: 20px;
   opacity: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  z-index: 1; }
 
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label {
@@ -2581,7 +2552,8 @@ input[type='text'],
 input[type='number'],
 input[type='tel'],
 input[type='email'],
-input[type='password'] {
+input[type='password'],
+textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2606,7 +2578,8 @@ input[type='password'] {
     input[type='number'],
     input[type='tel'],
     input[type='email'],
-    input[type='password'] {
+    input[type='password'],
+    textarea {
       font-size: 20px;
       line-height: 32px; } }
   @media (min-width: 925px) {
@@ -2614,7 +2587,8 @@ input[type='password'] {
     input[type='number'],
     input[type='tel'],
     input[type='email'],
-    input[type='password'] {
+    input[type='password'],
+    textarea {
       font-size: 20px;
       line-height: 32px; } }
   @media (min-width: mid) {
@@ -2622,14 +2596,16 @@ input[type='password'] {
     input[type='number'],
     input[type='tel'],
     input[type='email'],
-    input[type='password'] {
+    input[type='password'],
+    textarea {
       width: 75%;
       margin: 16px 0 32px 0; } }
   input[type='text']:focus,
   input[type='number']:focus,
   input[type='tel']:focus,
   input[type='email']:focus,
-  input[type='password']:focus {
+  input[type='password']:focus,
+  textarea:focus {
     outline: 0;
     -webkit-box-shadow: 0 0 0 5px #ffb81c;
     -moz-box-shadow: 0 0 0 5px #ffb81c;
@@ -2639,7 +2615,8 @@ input[type='password'] {
     input[type='number'].-small,
     input[type='tel'].-small,
     input[type='email'].-small,
-    input[type='password'].-small {
+    input[type='password'].-small,
+    textarea.-small {
       width: 11.5em; } }
 
 input[type="radio"]:focus {
@@ -2655,17 +2632,19 @@ input::-webkit-inner-spin-button {
 fieldset .no-margin {
   margin-top: 0 !important; }
 
-.-date {
+.-date div {
+  display: inline-block;
+  padding-right: 1em;
+  margin-top: 5px; }
+
+.-date .day,
+.-date .month {
+  width: 3em;
   -moz-appearance: textfield; }
-  .-date div {
-    display: inline-block;
-    padding-right: 1em;
-    margin-top: 5px; }
-  .-date .day,
-  .-date .month {
-    width: 3em; }
-  .-date .year {
-    width: 4em; }
+
+.-date .year {
+  width: 4em;
+  -moz-appearance: textfield; }
 
 .has-error .help-block {
   color: #da291c; }
