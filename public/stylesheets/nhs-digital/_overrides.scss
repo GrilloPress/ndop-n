@@ -122,7 +122,7 @@ thead {
 
 .workflow {
 
-  padding: 0 0 1em 0;
+  padding: 0 0 1em 1em;
 
   p {
 
@@ -138,9 +138,13 @@ thead {
 
       position:relative;
       list-style:none;
-      margin: 1em 0 6px 2em;
-      padding: 16px 6px;
+      padding: 32px 8px 16px 2em;
       clear: both;
+      border-top: 2px solid #425563;
+
+      &:last-child {
+        border-bottom: 2px solid #425563;
+      }
 
       a.button {
 
@@ -155,8 +159,7 @@ thead {
         content: counter(li);
         counter-increment: li;
         position: absolute;
-        top: 12px;
-        left: -2.5em;
+        left: -1em;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -172,4 +175,22 @@ thead {
       }
     }
   }
+}
+
+html {
+
+  color: $black;
+}
+
+textarea {
+
+  border-color: $blue;
+  font-weight: 600;
+  padding: 0.5em;
+
+}
+
+
+textarea:focus {
+  outline: 0;
 }

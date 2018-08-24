@@ -1,0 +1,81 @@
+{% set title = 'Your solution - Register a solution' %}
+{% set content_title = "Your solution" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+      <li><a href="#">Help</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/account">Account</a></li>
+      <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<section class="page-band">
+  <div class="grid-wrapper">
+      <div class="grid-row">
+          <div class="column column--reset">
+            <div class="grid-row">
+              <div class="column column--reset column--two-thirds">
+                <h1 class="h4">Register a solution</h1>
+              </div>
+              <div class="column column--one-third">
+
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--one-half column--reset">
+                          <form method="get" action="/{{PROTOTYPE_URL}}/product-details/product-clinical-safety-officer">
+                            <fieldset>
+                              <legend>
+                                <h1 class="h2">Do you have a clinical safety officer?</h1>
+                              </legend>
+
+                              <input type="radio" name="auth" id="nhs-number-journey" value="nhs-number-journey" class="multiple-choice--radio">
+                              <label for="nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
+                                Yes
+                              </label>
+
+                              <input type="radio" name="auth" id="no-nhs-number-journey" value="no-nhs-number-journey" class="">
+                              <label for="no-nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
+                                No
+                              </label>
+                                  </fieldset>
+                                  <input type="submit" class="button" id="submit-details" value="Continue">
+
+
+
+                          </form>
+
+                          <p>
+                            <a href="javascript: history.go(-1)">Go back </a>
+                          </p>
+                        </div>
+                        <div class="column column--one-half">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

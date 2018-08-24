@@ -1,0 +1,80 @@
+{% set title = 'Your solution - Register a solution' %}
+{% set content_title = "Version number" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+      <li><a href="#">Help</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/account">Account</a></li>
+      <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<section class="page-band">
+  <div class="grid-wrapper">
+      <div class="grid-row">
+          <div class="column column--reset">
+            <div class="grid-row">
+              <div class="column column--reset column--two-thirds">
+                <h1 class="h4">Register a solution</h1>
+              </div>
+              <div class="column column--one-third">
+
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--one-half column--reset">
+                          <form method="get" action="/{{PROTOTYPE_URL}}/product-details/product-lead-contact">
+
+                                  <div class="form-group form-row" id="first-name">
+                                    <h1>
+                                      <label for="first-name-input" class="h2 form-label error-label"> {{content_title}}</label>
+                                    </h1>
+                                    <span class="error error-message error-text" id="first-name-error">
+                                      Enter your solution name
+                                    </span>
+                                    <span class="form-label__hint">A version number helps buyers distinguish between major versions of your solution.</span>
+                                    <span class="form-label__hint">For example, 1 or 1.5.</span>
+
+
+                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                  </div>
+                                  <input type="submit" class="button" id="submit-details" value="Continue">
+
+
+
+                          </form>
+
+                          <p>
+                            <a href="javascript: history.go(-1)">Go back </a>
+                          </p>
+                        </div>
+                        <div class="column column--one-half">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}
