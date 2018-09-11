@@ -3336,9 +3336,9 @@ small.stepper {
   .loader.mobile {
     border: 3px solid #e1e9eb;
     border-top: 3px solid #005eb8;
-    width: 50px;
     height: 50px;
-    margin-top: 64px; }
+    margin-top: 64px;
+    width: 50px; }
 
 @keyframes spin {
   0% {
@@ -3367,7 +3367,21 @@ small.stepper {
   width: 32px;
   height: 32px;
   cursor: pointer;
-  opacity: 0; }
+  opacity: 0;
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none;
+  line-height: 24px; }
+  @media (min-width: 641px) {
+    .nhs-checkboxes__input {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .nhs-checkboxes__input {
+      font-size: 20px;
+      line-height: 32px; } }
 
 .nhs-checkboxes__label {
   display: inline-block;
@@ -9542,7 +9556,7 @@ thead td {
 .workflow {
   padding: 0 0 1em 1em; }
   .workflow p {
-    max-width: 580px; }
+    max-width: 510px; }
   .workflow ol {
     counter-reset: li;
     margin-left: 0;
@@ -9551,13 +9565,7 @@ thead td {
       position: relative;
       list-style: none;
       padding: 32px 8px 16px 2em;
-      clear: both;
-      border-top: 2px solid #425563; }
-      .workflow ol li:last-child {
-        border-bottom: 2px solid #425563; }
-      @media (min-width: 925px) {
-        .workflow ol li a.button {
-          float: right; } }
+      clear: both; }
       .workflow ol li:before {
         content: counter(li);
         counter-increment: li;
@@ -9573,7 +9581,26 @@ thead td {
         background: #005eb8;
         text-align: center;
         padding: 3px;
-        border-radius: 50%; }
+        border-radius: 50%;
+        z-index: 1000; }
+      .workflow ol li:after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 0;
+        height: 100%;
+        border-left: solid 2px;
+        left: 0;
+        top: 15px; }
+      .workflow ol li:first-child:after {
+        top: 32px; }
+      .workflow ol li:last-child:after {
+        height: 28%; }
+      .workflow ol li.success:before {
+        background-color: #007f3b;
+        border-color: #00662f;
+        color: #fff;
+        content: '\2713'; }
 
 html {
   color: #231f20; }
@@ -9585,5 +9612,22 @@ textarea {
 
 textarea:focus {
   outline: 0; }
+
+.button--small {
+  max-width: 100%;
+  padding: 8px 16px;
+  width: auto; }
+
+.button--secondary {
+  background-color: #425563;
+  box-shadow: 0 2px 0 #2e3b44; }
+  .button--secondary:hover {
+    background-color: #2e3b44; }
+  .button--secondary:visited {
+    background-color: inherit; }
+
+.plus {
+  font-size: 26px;
+  margin-right: 6px; }
 
 /*# sourceMappingURL=nhs-digital.css.map */

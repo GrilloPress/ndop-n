@@ -1,3 +1,5 @@
+$gray: #425563;
+
 .site-header__logo {
 
   width: 100px;
@@ -126,7 +128,7 @@ thead {
 
   p {
 
-    max-width: 580px;
+    max-width: 510px;
   }
 
   ol {
@@ -140,19 +142,7 @@ thead {
       list-style:none;
       padding: 32px 8px 16px 2em;
       clear: both;
-      border-top: 2px solid #425563;
-
-      &:last-child {
-        border-bottom: 2px solid #425563;
-      }
-
-      a.button {
-
-        @include media(desktop){
-
-          float: right;
-        }
-      }
+      // border-top: 2px solid #425563;
 
       &:before {
 
@@ -171,6 +161,53 @@ thead {
         text-align: center;
         padding: 3px;
         border-radius: 50%;
+        z-index: 1000;
+
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 0;
+        height: 100%;
+        border-left: solid 2px;
+        left: 0;
+        top: 15px;
+      }
+
+      &:first-child {
+
+        &:after {
+
+          top: 32px;
+
+        }
+
+      }
+
+      &:last-child {
+
+        &:after {
+
+          height: 28%;
+
+        }
+
+      }
+
+      &.success {
+
+        &:before {
+
+          background-color: $green;
+          border-color: darken($green, 5%);
+          color: $white;
+          content: '\2713';
+
+        }
+
+
 
       }
     }
@@ -193,4 +230,34 @@ textarea {
 
 textarea:focus {
   outline: 0;
+}
+
+.button--small {
+
+  max-width: 100%;
+  padding: 8px 16px;
+  width: auto;
+}
+
+.button--secondary {
+
+  background-color: $gray;
+  box-shadow: 0 2px 0 darken($gray, 10%);
+
+  &:hover {
+
+    background-color: darken($gray, 10%);
+  }
+
+  &:visited {
+
+    background-color: inherit;
+  }
+
+}
+
+.plus {
+
+  font-size: 26px;
+  margin-right: 6px;
 }
