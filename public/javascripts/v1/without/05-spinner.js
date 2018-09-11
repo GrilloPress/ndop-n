@@ -18,7 +18,8 @@ $(document).ready(function(){
   } else {
 
     window.setTimeout(function() {
-        window.location.href = THE_PROTOTYPE_URL + "/app/without-nhs-number/05X-no-unique-match";
+        // window.location.href = THE_PROTOTYPE_URL + "/app/without-nhs-number/05X-no-unique-match";
+        window.location.href = THE_PROTOTYPE_URL + "/app/03-verification-option";
     }, 6000);
 
   }
