@@ -1,0 +1,29 @@
+{% set title = "Sorry, we were unable to save your choice - Manage your data choice" %}
+{% set content_title = "Sorry, we were unable to save your choice" %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block body %}
+<main id="content" role="main" class="nhsapp">
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+            <h1 class="h2">{{content_title}}</h1>
+            <p>
+              This was due to an error on our behalf. Your choice has not been updated.
+            </p>
+            <p>Please try again later.</p>
+            <a class="button" href="/{{PROTOTYPE_URL}}/service/make-a-choice">Try again</a>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

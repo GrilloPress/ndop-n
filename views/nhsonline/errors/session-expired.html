@@ -1,0 +1,25 @@
+{% set title = "Sorry, you'll have to start again - Manage your data choice" %}
+{% set content_title = "Sorry, you'll have to start again" %}
+{% set PROTOTYPE_URL = 'nhsonline' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block body %}
+<main id="content" role="main" class="nhsapp">
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+            <h1 class="h2">{{content_title}}</h1>
+            <p>Your session automatically ends if you don't use the service for 15 minutes. We do this for your security.</p>
+            <a class="button" href="/{{PROTOTYPE_URL}}/service/spinner">Start again</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
