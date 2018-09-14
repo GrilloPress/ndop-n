@@ -1,8 +1,7 @@
 {% set title = 'Manage your choice - Manage your data choice' %}
-{% set PROTOTYPE_URL = 'nhsonline/old' %}
+{% set PROTOTYPE_URL = 'nhsonline/slimline' %}
 {% set content_title = "Manage your choice" %}
 {% block scripts %}
-<script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
 <script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
 {% endblock %}
 {% extends 'layouts/app.html' %}
@@ -20,9 +19,7 @@
           <h2 class="visually-hidden">Contents</h2>
           <ol class="nhsuk-c-page-contents__list">
             <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
             <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
           </ol>
         </nav>
@@ -38,10 +35,7 @@
               An opt-out will only apply to the health and care system in England. This does not apply to your health data where you have accessed health or care services outside of England, such as in Scotland and Wales.
             </p>
             <p>
-              If you choose to opt out, your data may still be used during some specific situations. For example, during an epidemic where there might be a risk to other people’s health.
-            </p>
-            <p>
-              <a role="button" class="button" aria-label="Start the online 'manage your choice' service" href="/nhsonline/service/spinner">Start now</a>
+              <a role="button" class="button" aria-label="Start the 'manage your choice' service" href="/nhsonline/service/spinner">Start now</a>
             </p>
           </div>
         <div class="column--one-third">
@@ -54,7 +48,7 @@
     <div class="reading-width">
       <div class="grid-row">
         <div class="column--two-thirds">
-          {{ patterns.page_nav( "Where an opt-out doesn't apply", "/" + PROTOTYPE_URL + "/04-where-opt-outs-dont-apply", "", "" ) }}
+          {{ patterns.page_nav( "Where an opt-out doesn't apply", "/" + PROTOTYPE_URL + "/02-where-opt-outs-dont-apply", "", "" ) }}
         </div>
       </div>
     </div>

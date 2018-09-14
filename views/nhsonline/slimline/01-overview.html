@@ -1,6 +1,6 @@
 {% set title = 'Overview - Manage your data choice' %}
 {% set content_title = "Overview" %}
-{% set PROTOTYPE_URL = 'nhsonline/old' %}
+{% set PROTOTYPE_URL = 'nhsonline/slimline' %}
 {% block scripts %}
 {% endblock %}
 {% extends 'layouts/app.html' %}
@@ -12,16 +12,14 @@
 
     <div class="nhsuk-page-heading">
       <h1 class="page-title__NHSUK">
-            <span role="text">Overview<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Manage your data choice</span></span>
         </h1>
         <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
           <h2 class="visually-hidden">Contents</h2>
           <ol class="nhsuk-c-page-contents__list">
-            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">Overview</span></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/04-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-where-opt-outs-dont-apply">Where an opt-out doesn't apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-manage-your-choice">Manage your choice</a></li>
           </ol>
         </nav>
     </div>
@@ -44,7 +42,7 @@
             If you don’t want your confidential patient information to be used for research and planning, you can opt out of this. Your confidential patient information will still be used to support your individual care as any choice you set will not change this. If you do not wish to opt out, you don’t have to do anything at all.
           </p>
           <p>
-            <a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a>
+            <a href="/{{PROTOTYPE_URL}}/03-manage-your-choice">Manage your choice</a>
           </p>
 
           <h3>More options</h3>
@@ -59,7 +57,7 @@
     <div class="reading-width">
       <div class="grid-row">
         <div class="column--two-thirds">
-          {{ patterns.page_nav( "", "", "Benefits of data sharing", "/" + PROTOTYPE_URL + "/02-benefits-of-data-sharing" ) }}
+          {{ patterns.page_nav( "", "", "Where opt outs don't apply", "/" + PROTOTYPE_URL + "/02-where-opt-outs-dont-apply" ) }}
         </div>
       </div>
     </div>

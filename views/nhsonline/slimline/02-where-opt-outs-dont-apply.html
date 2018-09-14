@@ -1,6 +1,6 @@
 {% set title = "Where an opt-out doesn't apply - Manage your data choice" %}
 {% set content_title = "Where an opt-out doesn't apply" %}
-{% set PROTOTYPE_URL = 'nhsonline/old' %}
+{% set PROTOTYPE_URL = 'nhsonline/slimline' %}
 {% block scripts %}
 {% endblock %}
 {% extends 'layouts/app.html' %}
@@ -18,10 +18,8 @@
           <h2 class="visually-hidden">Contents</h2>
           <ol class="nhsuk-c-page-contents__list">
             <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a></li>
             <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/05-manage-your-choice">Manage your choice</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/03-manage-your-choice">Manage your choice</a></li>
 
 
           </ol>
@@ -87,7 +85,7 @@
     <div class="reading-width">
       <div class="grid-row">
         <div class="column--two-thirds">
-          {{ patterns.page_nav( "How your data is used", "/" + PROTOTYPE_URL + "/03-how-your-data-is-used", "Manage your choice", "/" + PROTOTYPE_URL + "/05-manage-your-choice" ) }}
+          {{ patterns.page_nav( "Overview", "/" + PROTOTYPE_URL + "/01-overview", "Manage your choice", "/" + PROTOTYPE_URL + "/03-manage-your-choice" ) }}
         </div>
       </div>
     </div>
