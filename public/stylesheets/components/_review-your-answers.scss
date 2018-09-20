@@ -18,10 +18,6 @@
 
   }
 
-//  dt {
-
-//  }
-
   dd {
 
     display: inline-block;
@@ -29,8 +25,6 @@
     @include media(mobile) {
       display: block;
     }
-
-//  .answer {}
 
     &.change {
 

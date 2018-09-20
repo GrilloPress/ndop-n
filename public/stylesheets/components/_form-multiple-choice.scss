@@ -125,7 +125,7 @@
 }
 [type="radio"]:checked + label:after {
     opacity: 1;
-    background: $black;
+    background: currentColor;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
