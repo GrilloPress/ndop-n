@@ -1,0 +1,202 @@
+{% set title = 'Your solution - Register a solution' %}
+{% set content_title = "Lead contact" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+      <li><a href="#">Help</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/account">Account</a></li>
+      <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<section class="page-band">
+  <div class="grid-wrapper">
+      <div class="grid-row">
+          <div class="column column--reset">
+            <div class="grid-row">
+              <div class="column column--reset column--two-thirds">
+                <h1 class="h4">Register a solution</h1>
+              </div>
+              <div class="column column--one-third">
+
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--one-half column--reset">
+
+
+                          <form method="get" action="/{{PROTOTYPE_URL}}/product-details/product-check-before-submit">
+                            <fieldset>
+                              <legend>
+                                <h1 class="h2">Add your additional contacts</h1>
+                              </legend>
+
+                              <p>
+
+                              </p>
+
+                                    <div class="alert alert-info">
+                                      <details>
+                                        <summary role="button">
+                                          <span class="details__summary">Jim Smith</span>
+                                        </summary>
+                                        <div class="details__content">
+                                          <div class="reading-width">
+                                            <div class="form-group form-row" id="first-name">
+                                              <label for="first-name-input" class="form-label error-label">Full name</label>
+                                              <span class="error error-message error-text" id="first-name-error">
+                                                Enter your their full name
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="Jim Smith">
+                                            </div>
+
+                                            <div class="form-group form-row" id="first-name">
+                                              <label for="first-name-input" class="form-label error-label">Role</label>
+                                              <span class="error error-message error-text" id="first-name-error">
+                                                Enter their role
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="CEO">
+                                            </div>
+
+                                            <div class="form-group form-row" id="email">
+                                              <label for="email-input" class="form-label error-label">Email</label>
+                                              <span class="error error-message error-text" id="email-error">
+                                                Enter your their email
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="email-input" name="email" value="CEO@ORG.COM">
+                                            </div>
+
+                                            <div class="form-group form-row" id="email">
+                                              <label for="email-input" class="form-label error-label">Telephone</label>
+                                              <span class="error error-message error-text" id="email-error">
+                                                Enter their phone number
+                                              </span>
+                                              <input autocomplete="off" type="tel" class="form-control" id="email-input" name="email" value="0113 000 0000">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </details>
+                                    </div>
+
+                                    <div class="alert alert-info">
+                                      <details>
+                                        <summary role="button">
+                                          <span class="details__summary">Sally Smith</span>
+                                        </summary>
+                                        <div class="details__content">
+                                          <div class="reading-width">
+                                            <div class="form-group form-row" id="first-name">
+                                              <label for="first-name-input" class="form-label error-label">Full name</label>
+                                              <span class="error error-message error-text" id="first-name-error">
+                                                Enter your their full name
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="Sally Smith">
+                                            </div>
+
+                                            <div class="form-group form-row" id="first-name">
+                                              <label for="first-name-input" class="form-label error-label">Role</label>
+                                              <span class="error error-message error-text" id="first-name-error">
+                                                Enter their role
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="CTO">
+                                            </div>
+
+                                            <div class="form-group form-row" id="email">
+                                              <label for="email-input" class="form-label error-label">Email</label>
+                                              <span class="error error-message error-text" id="email-error">
+                                                Enter your their email
+                                              </span>
+                                              <input autocomplete="off" type="text" class="form-control" id="email-input" name="email" value="CTO@ORG.COM">
+                                            </div>
+
+                                            <div class="form-group form-row" id="email">
+                                              <label for="email-input" class="form-label error-label">Telephone</label>
+                                              <span class="error error-message error-text" id="email-error">
+                                                Enter their phone number
+                                              </span>
+                                              <input autocomplete="off" type="tel" class="form-control" id="email-input" name="email" value="0113 000 0000">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </details>
+                                    </div>
+
+                                  <div class="form-group form-row" id="first-name">
+                                    <label for="first-name-input" class="form-label error-label">Full name</label>
+                                    <span class="error error-message error-text" id="first-name-error">
+                                      Enter your their full name
+                                    </span>
+                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                  </div>
+
+                                  <div class="form-group form-row" id="first-name">
+                                    <label for="first-name-input" class="form-label error-label">Role</label>
+                                    <span class="error error-message error-text" id="first-name-error">
+                                      Enter their role
+                                    </span>
+                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                  </div>
+
+                                  <div class="form-group form-row" id="email">
+                                    <label for="email-input" class="form-label error-label">Email</label>
+                                    <span class="error error-message error-text" id="email-error">
+                                      Enter your their email
+                                    </span>
+                                    <input autocomplete="off" type="text" class="form-control" id="email-input" name="email" value="">
+                                  </div>
+
+                                  <div class="form-group form-row" id="email">
+                                    <label for="email-input" class="form-label error-label">Telephone</label>
+                                    <span class="error error-message error-text" id="email-error">
+                                      Enter their phone number
+                                    </span>
+                                    <input autocomplete="off" type="tel" class="form-control" id="email-input" name="email" value="">
+                                  </div>
+
+
+                                  </fieldset>
+
+
+
+                                  <p>
+                                    <a href="#" class="button button--small button--secondary"> <span class="plus">&plus;</span>Add another contact</a>
+                                  </p>
+
+                                  <input type="submit" class="button" id="submit-details" value="Submit and review">
+
+                          </form>
+
+                          <p>
+                            <a href="javascript: history.go(-1)">Go back </a>
+                          </p>
+                        </div>
+                        <div class="column column--one-half">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

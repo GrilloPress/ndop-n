@@ -1,0 +1,213 @@
+{% set title = 'Review your submission - Register a solution' %}
+{% set content_title = "Review your submission" %}
+{% set PROTOTYPE_URL = 'buying' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/nhs-digital.html' %}
+{% block nhsd_navbar%}
+<nav>
+    <ol class="list list--reset list--inline">
+      <li><a href="#">Help</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/account">Account</a></li>
+      <li><a href="#">Log out</a></li>
+    </ol>
+</nav>
+{% endblock %}
+{% block body %}
+<section class="page-band">
+  <div class="grid-wrapper">
+      <div class="grid-row">
+          <div class="column column--reset">
+            <div class="grid-row">
+              <div class="column column--reset column--two-thirds">
+                <h1 class="h4">Register a solution</h1>
+              </div>
+              <div class="column column--one-third">
+
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<main id="content" role="main">
+  <article class="article article--hub">
+    <div class="grid-wrapper grid-wrapper--article">
+        <div class="grid-row">
+            <div class="column column--reset">
+
+                <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
+                    <div class="grid-row">
+                        <div class="column column--two-thirds column--reset">
+                          <h2 class="h2" id="review-your-details">{{content_title}}</h2>
+                          <div class="">
+                            <h2 class="h3" id="review-your-details">Your solution</h2>
+                            <dl class="review-your-answers" id="your-name">
+                              <div>
+                                <dt class="question">
+                                  Name
+                                </dt>
+                                <dd class="answer">
+                                  Great product name
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/01-your-name">
+                                    Change<span class="util-visuallyhidden"> your name</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-dob">
+                              <div>
+                                <dt class="question">
+                                  Description
+                                </dt>
+                                <dd class="answer">
+                                  A really great product
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/02-your-date-of-birth">
+                                    Change<span class="util-visuallyhidden"> your date of birth</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-postcode">
+                              <div>
+                                <dt class="question">
+                                  Version number
+                                </dt>
+                                <dd class="answer">
+                                  1.5
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/03-your-postcode">
+                                    Change<span class="util-visuallyhidden"> your postcode</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+                          </div>
+
+                          <div class="">
+                            <h2 class="h3" id="review-your-details">Safety officer</h2>
+                            <dl class="review-your-answers" id="your-name">
+                              <div>
+                                <dt class="question">
+                                  Name
+                                </dt>
+                                <dd class="answer">
+                                  Great product name
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/01-your-name">
+                                    Change<span class="util-visuallyhidden"> your name</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-dob">
+                              <div>
+                                <dt class="question">
+                                  Description
+                                </dt>
+                                <dd class="answer">
+                                  A really great product
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/02-your-date-of-birth">
+                                    Change<span class="util-visuallyhidden"> your date of birth</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-postcode">
+                              <div>
+                                <dt class="question">
+                                  Version number
+                                </dt>
+                                <dd class="answer">
+                                  1.5
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/03-your-postcode">
+                                    Change<span class="util-visuallyhidden"> your postcode</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+                          </div>
+
+                          <div class="">
+                            <h2 class="h3" id="review-your-details">Additional contacts</h2>
+                            <dl class="review-your-answers" id="your-name">
+                              <div>
+                                <dt class="question">
+                                  Name
+                                </dt>
+                                <dd class="answer">
+                                  Jim Smith
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/01-your-name">
+                                    Change<span class="util-visuallyhidden"> your name</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-dob">
+                              <div>
+                                <dt class="question">
+                                  Role
+                                </dt>
+                                <dd class="answer">
+                                  CEO
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/02-your-date-of-birth">
+                                    Change<span class="util-visuallyhidden"> your date of birth</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+
+                            <dl class="review-your-answers" id="your-postcode">
+                              <div>
+                                <dt class="question">
+                                  Version number
+                                </dt>
+                                <dd class="answer">
+                                  1.5
+                                </dd>
+                                <dd class="change">
+                                  <a href="/{{PROTOTYPE_URL}}/app/without-nhs-number/change/03-your-postcode">
+                                    Change<span class="util-visuallyhidden"> your postcode</span>
+                                  </a>
+                                </dd>
+                              </div>
+                            </dl>
+                          </div>
+
+                          <p>
+                            <a href="javascript: history.go(-1)">Go back </a>
+                          </p>
+                        </div>
+                        <div class="column column--one-half">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+{% endblock %}

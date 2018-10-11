@@ -2209,7 +2209,7 @@ p {
 
 [type="radio"]:checked + label:after {
   opacity: 1;
-  background: #231f20;
+  background: currentColor;
   -webkit-transform: scale(1);
   transform: scale(1); }
 

@@ -39,29 +39,42 @@
 
                 <div id="section-summary" class="article-section article-section--summary article-section--reset-top">
                     <div class="grid-row">
-                        <div class="column column--one-half column--reset">
+                        <div class="column column--full column--reset">
                           <form method="get" action="/{{PROTOTYPE_URL}}/product-details/product-version">
                             <fieldset>
                               <legend>
                                 <h1 class="h2">Your additional contacts</h1>
                               </legend>
 
+                              <div class="grid-row">
+                                  <div class="column column--one-quarter column--reset">
+                                    <div class="form-group form-row" id="first-name">
+                                      <label for="first-name-input" class="form-label error-label">Full name</label>
+                                      <span class="error error-message error-text" id="first-name-error">
+                                        Enter your their full name
+                                      </span>
+                                      <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                    </div>
+                                  </div>
+                                  <div class="column column--one-quarter">
+                                    <div class="form-group form-row" id="first-name">
+                                      <label for="first-name-input" class="form-label error-label">Role</label>
+                                      <span class="error error-message error-text" id="first-name-error">
+                                        Enter their role
+                                      </span>
+                                      <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                    </div>
+                                  </div>
+                                </div>
 
-                                  <div class="form-group form-row" id="first-name">
-                                    <label for="first-name-input" class="form-label error-label">Full name</label>
-                                    <span class="error error-message error-text" id="first-name-error">
-                                      Enter your their full name
-                                    </span>
-                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                                <div class="grid-row">
+
                                   </div>
 
-                                  <div class="form-group form-row" id="first-name">
-                                    <label for="first-name-input" class="form-label error-label">Role</label>
-                                    <span class="error error-message error-text" id="first-name-error">
-                                      Enter their role
-                                    </span>
-                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
-                                  </div>
+
+
+
+
 
                                   <div class="form-group form-row" id="email">
                                     <label for="email-input" class="form-label error-label">Email</label>
