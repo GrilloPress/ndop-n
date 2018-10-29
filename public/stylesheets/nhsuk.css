@@ -3684,6 +3684,11 @@ small.stepper {
 .container--loader {
   text-align: center; }
 
+.otp-contact_field {
+  display: block;
+  margin-top: 8px;
+  font-weight: 500; }
+
 .nhs-checkboxes__item {
   display: block;
   position: relative;

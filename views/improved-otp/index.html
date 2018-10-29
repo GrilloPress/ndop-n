@@ -1,0 +1,42 @@
+{% set title = 'Improving the OTP drop-off rate - Find out why your NHS data matters' %}
+{% set content_title = 'Improving the OTP drop-off rate' %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+            <h1 class="h2">{{content_title}}</h1>
+            <p>
+              Prototypes to explore the best way to solve the drop-off at the OTP screen.
+            </p>
+            <ul>
+              <li>
+                <a href="/{{PROTOTYPE_URL}}/v1">User journey with a choice between SMS and email (two OTP methods)</a>
+              </li>
+              <li>
+                <a href="/{{PROTOTYPE_URL}}/v2">User journey with a single contact choice SMS or email (single OTP method)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}

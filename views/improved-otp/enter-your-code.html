@@ -1,6 +1,6 @@
 {% set title = 'Enter your code - Find out why your NHS data matters' %}
 {% set content_title = 'Enter your security code' %}
-{% set PROTOTYPE_URL = 'v1' %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/04-enter-your-code.js"></script>
 {% endblock %}
@@ -34,7 +34,7 @@
 
           <form class="form" action="javascript:submitCode()">
             <div class="form-group form-row">
-              <label class="form-label" for="code-input">Enter the code sent by <span id="2fa-method"> SMS to ••••••••788 </span></label>
+              <label class="form-label" for="code-input">Enter the code sent by <span id="2fa-method"> text to ••••••••788 </span></label>
               <div id="code-input-error" class="error error-message">
                 <p class="error-text error-label">Enter your code</p>
                 <br />

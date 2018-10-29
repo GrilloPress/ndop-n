@@ -1,0 +1,61 @@
+{% set title = 'Get your security code - Find out why your NHS data matters' %}
+{% set content_title = 'Get your security code' %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+            <p class="alert alert-success" role="alert" style="display:none;"  tabindex="-1">
+             We believe we've found a match based on the details you've provided.
+            </p>
+
+            <h1 class="h2">{{content_title}}</h1>
+
+            <p>We now need to send you a security code. We will send your code to the contact details we have found for you.</p>
+
+
+
+            <h2 class="h3">We will send your code by email to <span class="otp-contact_field" id="contact-value">
+              al•••••••••••@gmail.com
+            </span></h2>
+
+
+            <p>
+              The code will expire 30 minutes after it is sent.
+            </p>
+
+            <a class="button" href="/{{PROTOTYPE_URL}}/enter-your-code">Continue</a>
+
+            <p>
+              <a href="/{{PROTOTYPE_URL}}/index">I am unsure if this is my <span id="contact-method">email address</span></a>
+            </p>
+          </div>
+
+
+
+
+
+
+
+          </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}
