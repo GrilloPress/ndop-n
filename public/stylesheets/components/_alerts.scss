@@ -25,4 +25,12 @@
     border: 1px solid $red;
     background-color: lighten( $red, 50% ); //super pale, contrast of AAA 14.78:1
   }
+
+  &:focus{
+
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 5px #ffb81c;
+    -moz-box-shadow: 0 0 0 5px #ffb81c;
+    box-shadow: 0 0 0 5px #ffb81c;
+  }
 }
