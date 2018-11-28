@@ -1,0 +1,83 @@
+{% set title = 'Prototype N - NHSUK' %}
+{% set PROTOTYPE_URL = 'release' %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/">Index</a></li>
+      <li>{{title}}</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">{{title}}</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>June 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Content updates included in this release:</p>
+    <ul>
+      <li>
+        An update to the list of "Where opt-outs don't apply"
+      </li>
+      <li>
+        Addition of the "privacy policy" links to the download forms
+      </li>
+    </ul>
+
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/01-overview">Start Prototype</a>
+    <hr>
+    <h2 id="prototype-sections">Prototype sections</h2>
+    <div class="grid-row">
+      <div class="column--one-half">
+        <h3>Pages</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/02-benefits-of-data-sharing">Benefits of data sharing</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/03-how-your-data-is-used">How your data is used</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/03-how-data-is-protected">How data is protected</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/04-manage-your-choice">Manage your choice</a>
+          </li>
+        </ol>
+        <h3>Additional</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-privacy-notice">Privacy notice</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-terms-of-use">Terms of use</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-cookie-policy">Cookie policy</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">
+              Other ways to manage your choice
+            </a>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/01-overview">Start Prototype</a>
+
+  </div>
+</main>
+{% endblock %}
