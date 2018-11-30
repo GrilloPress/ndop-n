@@ -1,6 +1,6 @@
-{% set title = 'Manage your choice - Choose if your health records can be used for research and planning' %}
+{% set title = 'How to make your choice - Choose if your health records can be used for research and planning' %}
 {% set PROTOTYPE_URL = 'release' %}
-{% set content_title = "Manage your choice" %}
+{% set content_title = "How to make your choice" %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
 <script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
@@ -35,6 +35,8 @@
 
 <div class="nhsuk-o-width-container">
   <main id="content" role="main" class="nhsuk-o-main-wrapper">
+    <div class="nhsuk-o-grid">
+      <div class="nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds">
 
     <div class="nhsuk-page-heading">
       <h1 class="page-title__NHSUK">
@@ -45,34 +47,32 @@
           <ol class="nhsuk-c-page-contents__list">
             <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
             <li class="nhsuk-c-page-contents__item"><a href="/release/03-how-your-data-is-used">Where confidential patient information is used</a></li>
-            <li class="nhsuk-c-page-contents__item"><a href="/release/02-benefits-of-data-sharing">Where your choice does not apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/02-where-your-choice-does-not-apply">Where your choice does not apply</a></li>
             <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
           </ol>
         </nav>
+    </div>
+    </div>
     </div>
 
     <div class="reading-width">
         <div class="grid-row">
           <div class="column--two-thirds">
             <p>
-              Use this service to request that your confidential patient information is not used beyond your own individual care.
+              Use this service to choose whether your confidential patient information can be used for research and planning.
             </p>
             <p>
-              If you decide to opt out, this will be respected and applied by NHS Digital and Public Health England. These organisations collect, process and release health and adult social care data on a national basis. Your decision will also be respected and applied by all other organisations that are responsible for health and care information by March 2020.
+              If you choose not to allow your confidential patient information to be used for research and planning, this will be respected and applied by NHS Digital and Public Health England. These organisations collect, process and release health and adult social care data on a national basis.
             </p>
             <p>
-              An opt-out will only apply to the health and care system in England. This does not apply to your health data where you have accessed health or care services outside of England, such as in Scotland and Wales.
+              Your decision will also be respected and applied by all other organisations that are responsible for health and care information by March 2020.
             </p>
-            <p>
-              If you choose to opt out, your data may still be used during some specific situations. For example, during an epidemic where there might be a risk to other people’s health.
-            </p>
-            <p>
-              <a href="/{{PROTOTYPE_URL}}/00-where-opt-outs-dont-apply">More information about where your opt-out doesn't apply</a>
-            </p>
+            <h2>Making your choice</h2>
+            <p>You can make or change your choice by using our online service or completing a paper form and posting it back to us. You can also ask for help using our telephone service. You must complete a paper form if you wish to make or change a choice on behalf of someone else.</p>
 
-            <h2 class="h3" id="before-you-start">Before you start</h2>
+            <h3 id="before-you-start">Before you start</h3>
             <p>
-              You must have an email address or phone number registered with an NHS service to continue online. Ask your GP Practice for help if you need to confirm your contact information is up-to-date.
+              You must have an email address or phone number registered with an NHS service to use the online service. Ask your GP surgery for help if you need to confirm your contact information is up-to-date.
             </p>
             <p>To continue you will need:</p>
             <ul>
@@ -80,8 +80,7 @@
                 to be aged 13 or over
               </li>
               <li>access to your email or mobile phone</li>
-              <li>your NHS number or postcode registered with your GP​</li>
-
+              <li>your NHS number or postcode registered with your GP surgery​</li>
             </ul>
 
             <details class="nhsuk-c-details" role="group">
@@ -94,14 +93,13 @@
                   <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
 
                   <ul>
-                  <li>prescriptions</li>
-                  <li>test results</li>
-                  <li>hospital referral letters</li>
-                  <li>appointment letters</li>
-                  <li>your NHS medical card</li>
+                    <li>prescriptions</li>
+                    <li>test results</li>
+                    <li>hospital referral letters</li>
+                    <li>appointment letters</li>
                   </ul>
 
-                  <p>Ask your GP practice for help if you can't find your NHS number.</p>
+                  <p>Ask your GP surgery for help if you can't find your NHS number.</p>
               </div>
             </details>
 
@@ -109,11 +107,9 @@
               <a role="button" class="button" aria-label="Start the online 'manage your choice' service" href="/v1/app/index">Start now</a>
             </p>
 
-
-
-            <h2 class="h3" id="other-ways-to-manage-your-choice">Other ways to manage your choice </h2>
+            <h2 id="other-ways-to-manage-your-choice">Other ways to make your choice </h2>
             <p>
-              If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">other ways to manage your choice</a>.
+              If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">other ways to make your choice</a>.
             </p>
           </div>
         <div class="column--one-third">
@@ -126,7 +122,7 @@
     <div class="reading-width">
       <div class="grid-row">
         <div class="column--two-thirds">
-          {{ patterns.page_nav( "How your data is used", "/" + PROTOTYPE_URL + "/03-how-your-data-is-used", "", "" ) }}
+          {{ patterns.page_nav( "Where your choice does not apply", "/" + PROTOTYPE_URL + "/02-where-your-choice-does-not-apply", "", "" ) }}
         </div>
       </div>
     </div>
