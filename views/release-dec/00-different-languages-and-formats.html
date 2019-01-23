@@ -1,0 +1,116 @@
+{% set title = 'Different languages and formats - Find out why your NHS data matters' %}
+{% set content_title = 'Different languages and formats' %}
+{% set PROTOTYPE_URL = 'release' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/live.html' %}
+
+{% block body %}
+<nav class="nhsuk-c-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-o-width-container">
+    <ol class="nhsuk-c-breadcrumb__list">
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="#" class="nhsuk-c-breadcrumb__link">Home</a>
+              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                <image class="nhsuk-icon__chevron-right nhsuk-icon__chevron-right--fallback" src="/static/nhsuk_shared/img/icon-chevron-right-grey.f562fde428e8.png" xlink:href="">
+              </image></svg>
+          </li>
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__link">Choose if your health records can be used for research and planning</a>
+          </li>
+    </ol>
+
+    <p class="nhsuk-c-breadcrumb__back">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        <image class="nhsuk-icon__chevron-left nhsuk-icon__chevron-left--fallback" src="/static/nhsuk_shared/img/icon-chevron-left-blue.18f54059387e.png" xlink:href="">
+      </image></svg>
+      <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__backlink">Back to Choose if your health records can be used for research and planning</a></p>
+  </div>
+</nav>
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+    <div class="reading-width">
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <div class="nhsuk-page-heading">
+              <h1 class="page-title__NHSUK">
+                    <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Choose if your health records can be used for research and planning</span></span>
+                </h1>
+            </div>
+            <h2 id="#other-formats" class="h3">Other formats</h2>
+            <ul class="link-list">
+              <li>
+                <a>Audio version</a>
+              </li>
+              <li>
+                <a>British Sign Language video</a>
+              </li>
+              <li>
+                <a>Easy read leaflet</a>
+              </li>
+              <li>
+                <a>Large print leafet</a>
+              </li>
+            </ul>
+
+            <h2 id="#other-languages" class="h3">Other language leaflets</h2>
+            <ul class="link-list">
+              <li>
+                <a>Albanian - Shqip</a>
+              </li>
+              <li>
+                <a>Amharic - አማርኛ</a>
+              </li>
+              <li>
+                <a>Arabic - العربية</a>
+              </li>
+              <li>
+                <a>Chinese - 中文</a>
+              </li>
+              <li>
+                <a>Farsi - فارسی</a>
+              </li>
+              <li>
+                <a>Pashto - پښتو</a>
+              </li>
+              <li>
+                <a>Sorani - سۆرانی</a>
+              </li>
+              <li>
+                <a>Tamil - தமிழ்</a>
+              </li>
+              <li>
+                <a>Tigrinya - ትግርኛ</a>
+              </li>
+              <li>
+                <a>Urdu - اردو</a>
+              </li>
+              <li>
+                <a>Welsh - Cymraeg</a>
+              </li>
+            </ul>
+
+          </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "Overview", "/" + PROTOTYPE_URL + "/01-overview" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}

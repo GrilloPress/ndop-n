@@ -1,0 +1,133 @@
+{% set title = 'How to make your choice - Choose if your health records can be used for research and planning' %}
+{% set PROTOTYPE_URL = 'release' %}
+{% set content_title = "How to make your choice" %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/0X-before-you-start.js"></script>
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/live.html' %}
+
+{% block body %}
+
+<nav class="nhsuk-c-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-o-width-container">
+    <ol class="nhsuk-c-breadcrumb__list">
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="#" class="nhsuk-c-breadcrumb__link">Home</a>
+              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                <image class="nhsuk-icon__chevron-right nhsuk-icon__chevron-right--fallback" src="/static/nhsuk_shared/img/icon-chevron-right-grey.f562fde428e8.png" xlink:href="">
+              </image></svg>
+          </li>
+          <li class="nhsuk-c-breadcrumb__item">
+            <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__link">Choose if your health records can be used for research and planning</a>
+          </li>
+    </ol>
+
+    <p class="nhsuk-c-breadcrumb__back">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        <image class="nhsuk-icon__chevron-left nhsuk-icon__chevron-left--fallback" src="/static/nhsuk_shared/img/icon-chevron-left-blue.18f54059387e.png" xlink:href="">
+      </image></svg>
+      <a href="/{{PROTOTYPE_URL}}/01-overview" class="nhsuk-c-breadcrumb__backlink">Back to Choose if your health records can be used for research and planning</a></p>
+  </div>
+</nav>
+
+<div class="nhsuk-o-width-container">
+  <main id="content" role="main" class="nhsuk-o-main-wrapper">
+    <div class="nhsuk-o-grid">
+      <div class="nhsuk-o-grid__item nhsuk-o-grid__item--two-thirds">
+
+    <div class="nhsuk-page-heading">
+      <h1 class="page-title__NHSUK">
+            <span role="text">{{content_title}}<span class="nhsuk-page-heading__small"><span class="visually-hidden"> -</span> Choose if your health records can be used for research and planning</span></span>
+        </h1>
+        <nav class="nhsuk-c-page-contents" role="navigation" aria-label="Pages in this guide">
+          <h2 class="visually-hidden">Contents</h2>
+          <ol class="nhsuk-c-page-contents__list">
+            <li class="nhsuk-c-page-contents__item"><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/03-how-your-data-is-used">Where confidential patient information is used</a></li>
+            <li class="nhsuk-c-page-contents__item"><a href="/release/02-where-your-choice-does-not-apply">Where your choice does not apply</a></li>
+            <li class="nhsuk-c-page-contents__item"><span class="nhsuk-c-page-contents__current" aria-current="page">{{content_title}}</span></li>
+          </ol>
+        </nav>
+    </div>
+    </div>
+    </div>
+
+    <div class="reading-width">
+        <div class="grid-row">
+          <div class="column--two-thirds">
+            <p>
+              Use this service to choose whether your confidential patient information can be used for research and planning.
+            </p>
+            <p>
+              If you choose not to allow your confidential patient information to be used for research and planning, this will be respected and applied by NHS Digital and Public Health England. These organisations collect, process and release health and adult social care data on a national basis.
+            </p>
+            <p>
+              Your decision will also be respected and applied by all other organisations that are responsible for health and care information by March 2020.
+            </p>
+            <h2>Making your choice</h2>
+            <p>You can make or change your choice by using our online service or completing a paper form and posting it back to us. You can also ask for help using our telephone service. You must complete a paper form if you wish to make or change a choice on behalf of someone else.</p>
+
+            <h3 id="before-you-start">Before you start</h3>
+            <p>
+              You must have an email address or phone number registered with an NHS service to use the online service. Ask your GP surgery for help if you need to confirm your contact information is up-to-date.
+            </p>
+            <p>To continue you will need:</p>
+            <ul>
+              <li>
+                to be aged 13 or over
+              </li>
+              <li>access to your email or mobile phone</li>
+              <li>your NHS number or postcode registered with your GP surgery​</li>
+            </ul>
+
+            <details class="nhsuk-c-details" role="group">
+              <summary class="nhsuk-c-summary" data-analytics="summary" role="button" aria-controls="details-content-0" aria-expanded="false">
+                <span class="nhsuk-c-summary__title">Where can I find my NHS number?</span>
+              </summary>
+              <div class="nhsuk-c-details__content" id="details-content-0" aria-hidden="true">
+                  <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+
+                  <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+
+                  <ul>
+                    <li>prescriptions</li>
+                    <li>test results</li>
+                    <li>hospital referral letters</li>
+                    <li>appointment letters</li>
+                  </ul>
+
+                  <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+              </div>
+            </details>
+
+            <p>
+              <a role="button" class="button" aria-label="Start the online 'manage your choice' service" href="/v1/app/index">Start now</a>
+            </p>
+
+            <h2 id="other-ways-to-manage-your-choice">Other ways to make your choice </h2>
+            <p>
+              If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{PROTOTYPE_URL}}/00-other-ways-to-manage-your-choice">other ways to make your choice</a>.
+            </p>
+          </div>
+        <div class="column--one-third">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          {{ patterns.page_nav( "Where your choice does not apply", "/" + PROTOTYPE_URL + "/02-where-your-choice-does-not-apply", "", "" ) }}
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
