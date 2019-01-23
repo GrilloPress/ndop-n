@@ -1,0 +1,58 @@
+{% set title = 'No match found - Find out why your NHS data matters' %}
+{% set content_title = 'No match found' %}
+{% set PROTOTYPE_URL = 'v1' %}
+{% block scripts %}
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+    <div class="grid-row">
+      <div class="column--two-thirds">
+        <div class="reading-width">
+          <h1 class="h2">{{content_title}}</h1>
+          <p>Sorry, we were unable to find a unique match for your details.</p>
+          <p>
+            With no NHS number it is harder for us to find a match. You may wish to try again with your NHS number.
+          </p>
+
+          <a class="button" href="/{{PROTOTYPE_URL}}/app/with-nhs-number/03-your-nhs-number">Use my NHS number</a>
+          <details class="" role="group">
+            <summary role="button">
+              <span class="details__summary">Where can I find my NHS number?</span>
+            </summary>
+            <div class="details__content">
+              <div class="reading-width">
+                <p>
+                  An NHS number is a 10 digit number, like 485 777 3456.
+                </p>
+                <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                <ul>
+                  <li>prescriptions</li>
+                  <li>test results</li>
+                  <li>hospital referral letters</li>
+                  <li>appointment letters</li>
+                </ul>
+                <p>
+                  Ask your GP practice for help if you can't find your NHS number.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

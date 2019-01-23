@@ -1,0 +1,57 @@
+{% set title = 'Where should we send your security code? - Find out why your NHS data matters' %}
+{% set content_title = 'Where should we send your security code?' %}
+{% set PROTOTYPE_URL = 'v1' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Find out why your NHS data matters
+    </div>
+  </div>
+
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--full">
+
+              <div class="callout callout--interruption alt">
+                <h1 class="h2">{{content_title}}</h1>
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <div class="reading-width">
+                      <p>
+                        We now need to send you a security code. The code will expire 30 minutes after you have chosen your option.
+                      </p>
+                      <p>
+                        Your security code will be sent once you select an option below.
+                      </p>
+
+                        <a href="/{{PROTOTYPE_URL}}/app/details/01-your-name" class="button">Send an email to al•••••••••••@gmail.com</a>
+                        <br />
+                        <a href="/{{PROTOTYPE_URL}}/app/details/01-your-name" class="button">Send a text to ••••••••788</a>
+
+                        <p>
+                          <a href="/{{PROTOTYPE_URL}}/00-privacy-notice" target="_blank">I am unsure if these are my contact details</a>
+                        </p>
+                    </div>
+
+                  </div>
+                  <div class="column--one-quarter tablet">
+                    <img alt="" class="util-displaynone-mobile" width="100%" src="/images/choice-icon-white.svg" />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}
