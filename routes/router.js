@@ -126,6 +126,26 @@ router.get('/B/00-other-ways-to-manage-your-choice', function(req, res, next) {
   res.render( 'release/00-other-ways-to-manage-your-choice' );
 });
 
+// GET v1 index page.
+router.get('/v2-how/00-other-ways-to-manage-your-choice', function(req, res, next) {
+  res.render( 'release-how/00-other-ways-to-manage-your-choice' );
+});
+
+// GET v1 index page.
+router.get('/v2-how/01-overview', function(req, res, next) {
+  res.render( 'v2-how/app/how-to-manage-your-choice-online' );
+});
+
+// GET v1 index page.
+router.get('/v2-how/app/index', function(req, res, next) {
+  res.render( 'v2-how/app/how-to-manage-your-choice-online' );
+});
+
+// GET v1 index page.
+router.get('/v2-how/00-other-ways-to-manage-your-choice', function(req, res, next) {
+  res.render( 'release-how/00-other-ways-to-manage-your-choice' );
+});
+
 // catch all GET routes
 
 router.get('/:view', function(req, res, next) {

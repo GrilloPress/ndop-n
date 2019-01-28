@@ -1,4 +1,4 @@
-{% set title = 'Enter your postcode - Find out why your NHS data matters' %}
+{% set title = 'Enter your postcode - Choose if data from your health records is shared for research and planning' %}
 {% set content_title = 'Enter your postcode' %}
 {% set PROTOTYPE_URL = 'v2' %}
 {% set ANALYTICS_TRUE = 'True' %}
@@ -11,7 +11,7 @@
 <main id="content" role="main">
   <div class="page-band">
     <div class="page-section">
-      Find out why your NHS data matters
+      Choose if data from your health records is shared for research and planning
     </div>
   </div>
 
@@ -31,8 +31,8 @@
                       <div class="column--three-quarters">
                         <div id="postcode">
                           <div class="form-row">
-
                             <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
+                            <span class="form-label__hint">This must be your postcode you have registered with your GP surgery.</span>
                             <span class="form-label__hint">For example, 'LS1 6AE'</span>
                             <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
                           </div>

@@ -1,0 +1,54 @@
+{% set title = "We've found your details - Choose how data from your health records is shared for research and planning" %}
+{% set content_title = "We've found your details" %}
+{% set PROTOTYPE_URL = 'v2-how' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose how data from your health records is shared for research and planning
+    </div>
+  </div>
+
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--full">
+
+              <div class="callout callout--interruption alt">
+                <h1 class="h2">{{content_title}}</h1>
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <div class="reading-width">
+                      <p>
+                        We believe we've found a match based on the details you've provided.
+                      </p>
+                      <p>
+                        We now need to send you a security code. The code will expire 30 minutes after you have chosen where we should send your code.
+                      </p>
+                      <a href="01-where-should-we-send-your-code" class="button">Continue</a>
+
+                        <p>
+                          <a href="/{{PROTOTYPE_URL}}/00-privacy-notice" target="_blank">I don't understand what I'm being asked to do</a>
+                        </p>
+                    </div>
+
+                  </div>
+                  <div class="column--one-quarter tablet">
+                    <img alt="" class="util-displaynone-mobile" width="100%" src="/images/verification-method-icon.png" />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

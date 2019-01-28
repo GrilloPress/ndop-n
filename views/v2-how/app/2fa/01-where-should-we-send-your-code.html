@@ -1,0 +1,59 @@
+{% set title = "Where should we send your code? - Choose how data from your health records is shared for research and planning" %}
+{% set content_title = "Where should we send your code?" %}
+{% set PROTOTYPE_URL = 'v2-how' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose how data from your health records is shared for research and planning
+    </div>
+  </div>
+
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--full">
+
+              <div class="callout callout--interruption alt">
+                <h1 class="h2">{{content_title}}</h1>
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <div class="reading-width">
+                      <p>
+                        Your security code will be sent once you select an option.
+                      </p>
+                      <a class="button xl" href="/{{PROTOTYPE_URL}}/app/2fa/04-enter-your-code--EMAIL">
+                        Email my code to <span class="inner">al***********@gmail.com</span>
+                      </a>
+
+                      <a class="button xl" href="/{{PROTOTYPE_URL}}/app/2fa/04-enter-your-code--EMAIL">
+                        Text my code to <span class="inner">********788</span>
+                      </a>
+
+
+                        <p>
+                          <a href="/{{PROTOTYPE_URL}}/app/03X-contact-us">I am unsure if these are my contact details</a>
+                        </p>
+                    </div>
+
+                  </div>
+                  <div class="column--one-quarter tablet">
+                    <img alt="" class="util-displaynone-mobile" width="100%" src="/images/verification-method-icon.png" />
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}
