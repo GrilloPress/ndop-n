@@ -7,23 +7,24 @@
 {% block body %}
 <main id="content" role="main">
   <div class="page-section">
-    <div class="local-header">
-      <h1 class="local-header__title">{{title}}</h1>
-      <div class="local-header__intro">
-        <p>Homepage for {{title}} prototypes.</p>
-      </div>
-    </div>
 
     <div class="grid-row">
       <div class="column--two-thirds">
-        <div class="callout callout--attention">
-          <h2>Latest</h2>
-          <h3>
+        <div class="">
+          <h1 class="h2">{{title}}</h1>
+
+          <h2 class="h3">
             <a title="Prototype N Summary Page - {{ title }}" href="/release/01-overview">Landing pages (IF)</a>
-          </h3>
-          <h3>
+          </h2>
+          <h2 class="h3">
             <a title="Prototype N Summary Page - {{ title }}" href="/release-how/01-overview">Landing pages (HOW)</a>
-          </h3>
+          </h2>
+
+          <p>
+            <a href="/">Back to previous page</a>
+          </p>
+
+
         </div>
       </div>
 
