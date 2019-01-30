@@ -2409,10 +2409,7 @@ p {
   color: #425563;
   display: block;
   font-weight: normal;
-  margin-top: 4px; }
-  @media (min-width: 925px) {
-    .form-label__hint {
-      margin-top: 16px; } }
+  margin-top: 16px; }
 
 .gender-select label {
   font-weight: normal; }

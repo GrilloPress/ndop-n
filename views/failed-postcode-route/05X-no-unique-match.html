@@ -1,0 +1,37 @@
+{% set title = 'Sorry, the details you gave us do not match what we have in our records - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = 'Sorry, the details you gave us do not match what we have in our records' %}
+{% set PROTOTYPE_URL = 'failed-postcode-route' %}
+{% block scripts %}
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="grid-row">
+      <div class="column--two-thirds">
+        <div class="reading-width">
+          <h1 class="h2">{{ content_title }}</h1>
+
+          <p>This may be because your GP practice does not have the correct details for you.</p>
+
+          <p>You may be able to make your choice online by giving us your NHS number.</p>
+
+          <button class="button" onclick="window.location.href='/{{PROTOTYPE_URL}}/06-your-nhs-number'">
+            Use my NHS number
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

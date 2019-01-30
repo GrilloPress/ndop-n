@@ -1,6 +1,6 @@
 {% set title = 'Enter your postcode - Choose if data from your health records is shared for research and planning' %}
 {% set content_title = 'Enter your postcode' %}
-{% set PROTOTYPE_URL = 'v2' %}
+{% set PROTOTYPE_URL = 'failed-postcode-route' %}
 {% set ANALYTICS_TRUE = 'True' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/without/03-your-postcode.js"></script>
@@ -23,17 +23,17 @@
                   <ul class="link-list" id="link-to-errors">
                   </ul>
                 </div>
-                  <form action="javascript:submit()">
+                  <form action="javascript:onclick(window.location.href='/{{PROTOTYPE_URL}}/04-review-your-details')">
                     <h1 class="h2">
                       <label for="postcode">{{content_title}}</label>
                     </h1>
                     <div class="grid-row">
                       <div class="column--three-quarters">
-                        <div id="postcode-input">
+                        <div id="postcode">
                           <div class="form-row">
                             <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
-                            <span class="form-label__hint">This must be your postcode you have registered with your GP surgery.</span>
-                            <span class="form-label__hint">For example, 'LS1 6AE'</span>
+                            <span class="form-label__hint">This must be your postcode you have registered with your GP practice.</span>
+                            <span class="form-label__hint">For example LS1 6AE</span>
                             <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
                           </div>
                         </div>

@@ -34,11 +34,7 @@
   color: $grey-1;
   display: block;
   font-weight: normal;
-  margin-top: $baseline-grid-unit;
-
-  @include media(desktop) {
-    margin-top: $baseline-grid-unit * 4;
-  }
+  margin-top: $baseline-grid-unit * 4;
 }
 
 .gender-select label {
