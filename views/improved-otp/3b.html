@@ -1,0 +1,46 @@
+{% set title = 'Choose how to verify yourself - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "We now need to send you a security code" %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+
+            <h1 class="h2">{{content_title}}</h1>
+
+            <p>We'll use the contact details we've found for you from your GP practice.</p>
+
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
+              <h2 class="h3">We will send your code by email to <span class="otp-contact_field" id="contact-value">
+                al•••••••••••@gmail.com
+              </span></h2>
+              <p>The code will expire 30 minutes after you have chosen your option.</p>
+              <input id="choose-option" class="button" type="submit" value="Submit" />
+              <p>
+                <a href="/{{PROTOTYPE_URL}}/index">I am unsure if this is my <span id="contact-method">email address</span></a>
+              </p>
+            </form>
+          </div>
+
+          </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% set title = 'How to make your choice online - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = 'We need your name, date of birth and NHS number or postcode so you can make your choice' %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+<script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+          <div class="grid-row">
+            <div class="column--full">
+              <div class="callout callout--interruption alt">
+
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <h1 class="h2">{{content_title}}</h1>
+                    <div class="reading-width">
+
+                      <p>
+                        We'll use these details to:
+                      </p>
+                      <ul>
+                        <li>check who you are</li>
+                        <li>find your contact details from your GP record so that we can send you a security code</li>
+                      </ul>
+
+                        <button type="submit" onclick="window.location.href='/{{PROTOTYPE_URL}}/2'" class="button">Continue</button>
+                      <p>
+                        <a href="/{{PROTOTYPE_URL}}/00-privacy-notice#what-information-do-we-collect-about-you" target="_blank">How your data will be processed using this service<span class='util-visuallyhidden'> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window).</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--three-quarters">
+          {{ patterns.page_nav( "Before you start", "/release" + "/04-manage-your-choice#before-you-start", "", "" ) }}
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
