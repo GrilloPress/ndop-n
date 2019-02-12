@@ -1,5 +1,5 @@
-{% set title = 'We need to send you a security code - Choose if data from your health records is shared for research and planning' %}
-{% set content_title = "We need to send you a security code" %}
+{% set title = 'We now need to send you a security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "We now need to send you a security code" %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
@@ -21,50 +21,23 @@
         <div class="column--two-thirds">
           <div class="reading-width">
 
-            <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
-              <h2 class="h3" id="error-summary">There is a problem</h2>
-              <ul class="link-list" id="link-to-errors">
-                <li>
-                  <a href="#verification-radio">No option selected</a>
-                </li>
-              </ul>
-            </div>
-
             <h1 class="h2">{{content_title}}</h1>
 
-            <p>With the details you gave us we think we’ve found your contact details from your GP practice. We could only find your email address.</p>
+            <p>With the details you gave us we think we’ve found your contact details from your health records. We could only find your <span id="contact-method-2">mobile number</span>.</p>
 
-            <p>Your security code will expire 30 minutes after we send it to you.</p>
+            <p>After 30 minutes your security code will not work.</p>
 
-            <form id="verification-radio" class="form" onsubmit="return !! confirmAll()">
-                <fieldset class="form-group form-row">
-                  <legend class="h3">
-                    Where should we send your security code?
-                  </legend>
-                <div class="error error-message">
-                  <p class="error-text error-label">Choose where you would like to receive your security code</p>
-                </div>
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
+              <h2 class="h3">We'll send your security code by text to <span class="otp-contact_field" id="contact-value">
+                ••••••••788
+              </span></h2>
 
-                <input type="radio" name="channel-choice" id="email-verification" value="email" class="multiple-choice--radio">
-                <label for="email-verification" class="form-label form-label--radio form-label-lg">
-                  By email to al•••••••••••@gmail.com
-                </label>
-
-                <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="">
-                <label for="unrecognised" class="form-label form-label--radio">
-                  These contact details are incorrect
-                </label>
-              </fieldset>
-              <input id="choose-option" class="button" type="submit" value="Submit" />
-
+              <input id="choose-option" class="button" type="submit" value="Send" />
+              <p>
+                <a href="/{{PROTOTYPE_URL}}/index">What to do if you think these contact details are wrong</a>
+              </p>
             </form>
           </div>
-
-
-
-
-
-
 
           </div>
     </div>

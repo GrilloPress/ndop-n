@@ -1,5 +1,5 @@
-{% set title = 'How to make your choice online - Choose if data from your health records is shared for research and planning' %}
-{% set content_title = 'We need your name, date of birth and NHS number or postcode so you can make your choice' %}
+{% set title = 'We need to check who you are before you can make your choice - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = 'We need to check who you are before you can make your choice' %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
 <script src="/javascripts/details.polyfill-1.0.0.min.js"></script>
@@ -24,12 +24,17 @@
                     <div class="reading-width">
 
                       <p>
-                        We'll use these details to:
+                        We'll need your:
                       </p>
                       <ul>
-                        <li>check who you are</li>
-                        <li>find your contact details from your GP practice so we can send you a security code</li>
+                        <li>name</li>
+                        <li>date of birth</li>
+                        <li>postcode or NHS number</li>
                       </ul>
+
+                      <p>
+                        We'll use these details to find your contact details from your health records so we can send you a security code.
+                      </p>
 
                         <button type="submit" onclick="window.location.href='/{{PROTOTYPE_URL}}/2'" class="button">Continue</button>
                       <p>

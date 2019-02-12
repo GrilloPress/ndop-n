@@ -1,5 +1,5 @@
-{% set title = 'We need to send you a security code - Choose if data from your health records is shared for research and planning' %}
-{% set content_title = "We need to send you a security code" %}
+{% set title = 'We now need to send you a security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "We now need to send you a security code" %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
@@ -32,9 +32,9 @@
 
             <h1 class="h2">{{content_title}}</h1>
 
-            <p>With the details you gave us we think we’ve found your contact details from your GP practice.</p>
+            <p>With the details you gave us we think we’ve found your contact details from your health records.</p>
 
-            <p>Your security code will expire 30 minutes after we send it to you.</p>
+            <p>After 30 minutes your security code will not work.</p>
 
             <form id="verification-radio" class="form" onsubmit="return !! confirmAll()">
                 <fieldset class="form-group form-row">
@@ -57,10 +57,10 @@
 
                 <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="">
                 <label for="unrecognised" class="form-label form-label--radio">
-                  These contact details are incorrect
+                  These contact details are wrong
                 </label>
               </fieldset>
-              <input id="choose-option" class="button" type="submit" value="Submit" />
+              <input id="choose-option" class="button" type="submit" value="Send" />
 
             </form>
           </div>

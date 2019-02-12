@@ -1,5 +1,5 @@
-{% set title = 'We need to send you a security code - Choose if data from your health records is shared for research and planning' %}
-{% set content_title = "We need to send you a security code" %}
+{% set title = 'We now need to send you a security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "We now need to send you a security code" %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
@@ -23,18 +23,18 @@
 
             <h1 class="h2">{{content_title}}</h1>
 
-            <p>With the details you gave us we think we’ve found your contact details from your GP practice. We could only find your email address.</p>
+            <p>With the details you gave us we think we’ve found your contact details from your health records. We could only find your <span id="contact-method-2">email address</span>.</p>
 
-            <p>Your security code will expire 30 minutes after we send it to you.</p>
+            <p>After 30 minutes your security code will not work.</p>
 
             <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
               <h2 class="h3">We'll send your security code by email to <span class="otp-contact_field" id="contact-value">
                 al•••••••••••@gmail.com
               </span></h2>
 
-              <input id="choose-option" class="button" type="submit" value="Submit" />
+              <input id="choose-option" class="button" type="submit" value="Send" />
               <p>
-                <a href="/{{PROTOTYPE_URL}}/index">This <span id="contact-method">email address</span> is incorrect</a>
+                <a href="/{{PROTOTYPE_URL}}/index">What to do if you think these contact details are wrong</a>
               </p>
             </form>
           </div>
