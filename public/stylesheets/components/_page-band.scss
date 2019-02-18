@@ -4,6 +4,10 @@
   color: white;
   @include core-font(20);
 
+  @include media(mobile) {
+    @include core-font(16);
+  }
+
   a {
 
     color: white;
