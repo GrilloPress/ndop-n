@@ -93,7 +93,7 @@
   margin-#{$position}: $default-spacing-unit;
 
   @include media(desktop) {
-    margin-#{$position}: $default-spacing-unit * 2;
+    margin-#{$position}: $default-spacing-unit * 1.5;
   }
 }
 

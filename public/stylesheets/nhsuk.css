@@ -827,7 +827,7 @@ body {
     margin-top: 16px; }
     @media (min-width: 925px) {
       .page-section * + * {
-        margin-top: 32px; } }
+        margin-top: 24px; } }
 
 .page-section--collapse-bottom {
   padding-bottom: 0; }
@@ -1441,7 +1441,7 @@ table {
       margin-top: 16px; }
       @media (min-width: 925px) {
         .global-footer * + * {
-          margin-top: 32px; } }
+          margin-top: 24px; } }
   .global-footer a:link {
     color: #fff; }
   .global-footer a:visited {
@@ -1570,7 +1570,7 @@ table {
       padding: 32px; } }
   @media (min-width: 925px) {
     .local-header {
-      margin-top: 32px; } }
+      margin-top: 24px; } }
   @media (min-width: 641px) {
     .local-header {
       padding-top: 32px; } }
@@ -1595,7 +1595,7 @@ table {
     margin-top: 16px; }
     @media (min-width: 925px) {
       .local-header * + * {
-        margin-top: 32px; } }
+        margin-top: 24px; } }
 
 .local-header__return {
   background-color: #005eb8;
@@ -1723,6 +1723,234 @@ table {
 
 input:focus {
   outline: none; }
+
+.button {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  background-color: #007f3b;
+  border: 0;
+  box-shadow: 0 2px 0 #003317;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: .5px;
+  line-height: 1.25;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  border-radius: 0;
+  color: #fff; }
+  @media (min-width: 641px) {
+    .button {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .button {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 641px) {
+    .button {
+      width: auto; } }
+  .button + .button {
+    margin-top: 16px; }
+    @media (min-width: 641px) {
+      .button + .button {
+        margin-left: 16px;
+        margin-top: 0; } }
+    @media (min-width: 925px) {
+      .button + .button {
+        margin-left: 32px; } }
+  .button:visited {
+    background-color: #007f3b; }
+  .button:focus {
+    outline: 3px solid #ffb81c; }
+  .button:hover, .button:focus {
+    background-color: #00662f; }
+  .button:active {
+    box-shadow: 0 0 0 #007f3b;
+    top: 2px; }
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    opacity: .5; }
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      background-color: #007f3b;
+      cursor: default; }
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      box-shadow: 0 2px 0 #003317;
+      top: 0; }
+  .button:link, .button:hover, .button:focus, .button:visited {
+    color: #fff; }
+  .button:before {
+    background: transparent;
+    content: "";
+    display: block;
+    height: 110%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .button:active:before {
+    height: 120%;
+    top: -10%; }
+
+.button--secondary {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  background-color: #d8dde0;
+  border: 0;
+  box-shadow: 0 2px 0 #adb8be;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: .5px;
+  line-height: 1.25;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  border-radius: 0;
+  color: #231f20; }
+  @media (min-width: 641px) {
+    .button--secondary {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .button--secondary {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 641px) {
+    .button--secondary {
+      width: auto; } }
+  .button--secondary + .button {
+    margin-top: 16px; }
+    @media (min-width: 641px) {
+      .button--secondary + .button {
+        margin-left: 16px;
+        margin-top: 0; } }
+    @media (min-width: 925px) {
+      .button--secondary + .button {
+        margin-left: 32px; } }
+  .button--secondary:visited {
+    background-color: #d8dde0; }
+  .button--secondary:focus {
+    outline: 3px solid #ffb81c; }
+  .button--secondary:hover, .button--secondary:focus {
+    background-color: #cad1d5; }
+  .button--secondary:active {
+    box-shadow: 0 0 0 #d8dde0;
+    top: 2px; }
+  .button--secondary.disabled, .button--secondary[disabled="disabled"], .button--secondary[disabled] {
+    opacity: .5; }
+    .button--secondary.disabled:hover, .button--secondary[disabled="disabled"]:hover, .button--secondary[disabled]:hover {
+      background-color: #d8dde0;
+      cursor: default; }
+    .button--secondary.disabled:active, .button--secondary[disabled="disabled"]:active, .button--secondary[disabled]:active {
+      box-shadow: 0 2px 0 #adb8be;
+      top: 0; }
+  .button--secondary:link, .button--secondary:hover, .button--secondary:focus, .button--secondary:visited {
+    color: #231f20; }
+  .button--secondary:before {
+    background: transparent;
+    content: "";
+    display: block;
+    height: 110%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .button--secondary:active:before {
+    height: 120%;
+    top: -10%; }
+
+.button--cancel {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  background-color: #da291c;
+  border: 0;
+  box-shadow: 0 2px 0 #961c13;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: .5px;
+  line-height: 1.25;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  border-radius: 0;
+  color: #fff; }
+  @media (min-width: 641px) {
+    .button--cancel {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .button--cancel {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 641px) {
+    .button--cancel {
+      width: auto; } }
+  .button--cancel + .button {
+    margin-top: 16px; }
+    @media (min-width: 641px) {
+      .button--cancel + .button {
+        margin-left: 16px;
+        margin-top: 0; } }
+    @media (min-width: 925px) {
+      .button--cancel + .button {
+        margin-left: 32px; } }
+  .button--cancel:visited {
+    background-color: #da291c; }
+  .button--cancel:focus {
+    outline: 3px solid #ffb81c; }
+  .button--cancel:hover, .button--cancel:focus {
+    background-color: #c32519; }
+  .button--cancel:active {
+    box-shadow: 0 0 0 #da291c;
+    top: 2px; }
+  .button--cancel.disabled, .button--cancel[disabled="disabled"], .button--cancel[disabled] {
+    opacity: .5; }
+    .button--cancel.disabled:hover, .button--cancel[disabled="disabled"]:hover, .button--cancel[disabled]:hover {
+      background-color: #da291c;
+      cursor: default; }
+    .button--cancel.disabled:active, .button--cancel[disabled="disabled"]:active, .button--cancel[disabled]:active {
+      box-shadow: 0 2px 0 #961c13;
+      top: 0; }
+  .button--cancel:link, .button--cancel:hover, .button--cancel:focus, .button--cancel:visited {
+    color: #fff; }
+  .button--cancel:before {
+    background: transparent;
+    content: "";
+    display: block;
+    height: 110%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .button--cancel:active:before {
+    height: 120%;
+    top: -10%; }
 
 .button--secondary {
   font-family: "Frutiger W01", Arial, sans-serif;
@@ -2317,7 +2545,7 @@ p {
   margin-bottom: 16px; }
   @media (min-width: 925px) {
     .gallery__item--inline {
-      margin-bottom: 32px; } }
+      margin-bottom: 24px; } }
   @media (min-width: 641px) {
     .gallery__item--inline {
       float: left;
@@ -2409,6 +2637,7 @@ p {
   color: #425563;
   display: block;
   font-weight: normal;
+  line-height: 150%;
   margin-top: 16px; }
 
 .gender-select label {
@@ -2821,7 +3050,7 @@ fieldset .no-margin {
   border-top-width: 1px; }
   @media (min-width: 925px) {
     .tabs__nav--top {
-      margin-bottom: 32px; } }
+      margin-bottom: 24px; } }
 
 .tabs__nav-item {
   border: solid #aeb7bd;
