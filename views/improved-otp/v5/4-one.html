@@ -1,8 +1,7 @@
 {% set title = 'Get your security code - Choose if data from your health records is shared for research and planning' %}
-{% set content_title = "Get your security code" %}
+{% set content_title = "We can still send you a security code" %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
-<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -25,52 +24,46 @@
               <h2 class="h3" id="error-summary">There is a problem</h2>
               <ul class="link-list" id="link-to-errors">
                 <li>
-                  <a href="#verification-radio">No option selected</a>
+                  <a href="#verification-radio">Choose whether you think your email or mobile number is correct</a>
                 </li>
               </ul>
             </div>
 
             <h1 class="h2">{{content_title}}</h1>
 
-            <p>With the details you gave us we think we’ve found your contact details from your health records.</p>
+            <p>Sorry, we seem to have an incorrect contact detail for you.</p>
 
-            <p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
+            <p>If you haven't updated your contact details with your GP practice please do next time you visit them.</p>
 
-
-            <form id="verification-radio" class="form" onsubmit="return !! confirmAll()">
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/v5/4-both" method="post">
                 <fieldset class="form-group form-row">
                   <legend class="h3">
-                    Where should we send your security code?
+                    Where should we send you your security code?
                   </legend>
                   <div class="error error-message">
-                    <p class="error-text error-label">Choose where you would like to receive your security code</p>
+                    <p class="error-text error-label">Choose whether you think your email or mobile number is correct</p>
                   </div>
+
+                  <p>
+                    <span class="form-label__hint">After 30 minutes your security code will not work</span>
+                  </p>
+
                   <div class="form-group__item">
-                    <input type="radio" name="channel-choice" id="email-verification" value="email" class="multiple-choice--radio">
+                    <input type="radio" name="channelChoice" id="email-verification" value="email" class="multiple-choice--radio">
                     <label for="email-verification" class="form-label form-label--radio form-label-lg">
                       By email to al•••••••••••@gmail.com
                     </label>
                   </div>
 
                   <div class="form-group__item">
-                    <input type="radio" name="channel-choice" id="text-verification" value="text" class="multiple-choice--radio">
+                    <input type="radio" name="channelChoice" id="text-verification" value="text" class="multiple-choice--radio">
                     <label for="text-verification" class="form-label form-label--radio form-label-lg">
                       By text to ••••••••788
                     </label>
                   </div>
 
-                  <div class="form-group__divider">
-                    <p>or</p>
-                  </div>
-
-                  <div class="form-group__item">
-                    <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="">
-                    <label for="unrecognised" class="form-label form-label--radio">
-                      These contact details are wrong
-                    </label>
-                  </div>
               </fieldset>
-              <input id="choose-option" class="button" type="submit" value="Submit" />
+              <input id="choose-option" class="button" type="submit" value="Continue" />
 
             </form>
           </div>

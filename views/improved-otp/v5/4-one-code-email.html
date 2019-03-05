@@ -1,0 +1,73 @@
+{% set title = 'Get your security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "You can still make your choice" %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+
+            <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+              <h2 class="h3" id="error-summary">There is a problem</h2>
+              <ul class="link-list" id="link-to-errors">
+                <li>
+                  <a href="#verification-radio">Choose whether you think your email or mobile number is correct</a>
+                </li>
+              </ul>
+            </div>
+
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/v5/4-both" method="post">
+                <fieldset class="form-group form-row">
+                  <legend>
+                    <h1 class="h2">{{content_title}}</h1>
+                  </legend>
+                  <div class="error error-message">
+                    <p class="error-text error-label">Choose whether you think your email or mobile number is correct</p>
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="email-verification" value="email" class="multiple-choice--radio">
+                    <label for="email-verification" class="form-label form-label--radio form-label-lg">
+                      My email al•••••••••••@gmail.com
+                    </label>
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="text-verification" value="text" class="multiple-choice--radio">
+                    <label for="text-verification" class="form-label form-label--radio form-label-lg">
+                      My mobile number ••••••••788
+                    </label>
+                  </div>
+
+              </fieldset>
+              <input id="choose-option" class="button" type="submit" value="Continue" />
+
+            </form>
+          </div>
+
+
+
+
+
+
+
+          </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% set title = 'Get your security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "Check your contact details" %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+
+            <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+              <h2 class="h3" id="error-summary">There is a problem</h2>
+              <ul class="link-list" id="link-to-errors">
+                <li>
+                  <a href="#verification-radio">No option selected</a>
+                </li>
+              </ul>
+            </div>
+
+            <h1 class="h2">{{content_title}}</h1>
+
+            <p>Using the information you gave us we think we've found your contact details.</p>
+
+            <p>We'll use these contact details to send you a security code.</p>
+
+            <p>We found these details:</p>
+
+            <div class="otp">
+              <dl class="list--unstyled inline-list otp__list">
+                <dt class="inline-list__item">
+                  <span class="">Mobile number:</span>
+                </dt>
+                <dd class="inline-list__item">
+                  <span class="otp__address">••••••••788</span>
+                </dd>
+              </dl>
+              <dl class="list--unstyled inline-list otp__list">
+                <dt class="inline-list__item">
+                  <span class="">Email:</span>
+                </dt>
+                <dd class="inline-list__item">
+                  <span class="otp__address">al•••••••••••@gmail.com</span>
+                </dd>
+              </dl>
+            </div>
+
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/v5/3" method="post">
+                <fieldset class="form-group form-row">
+                  <legend class="h3">
+                    Are these contact details correct?
+                  </legend>
+                  <div class="error error-message">
+                    <p class="error-text error-label">Choose where you would like to receive your security code</p>
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="both-verification" value="both" class="multiple-choice--radio">
+                    <label for="both-verification" class="form-label form-label--radio form-label-lg">
+                      Yes, both of these contact details are correct
+                    </label>
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="text-verification" value="text" class="multiple-choice--radio">
+                    <label for="text-verification" class="form-label form-label--radio form-label-lg">
+                      Only my mobile number is correct
+                    </label>
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="email-verification" value="email" class="multiple-choice--radio">
+                    <label for="email-verification" class="form-label form-label--radio form-label-lg">
+                      Only my email is correct
+                    </label>
+                  </div>
+
+                  <div class="form-group__divider">
+                    or
+                  </div>
+
+                  <div class="form-group__item">
+                    <input type="radio" name="channelChoice" id="unrecognised" value="none" class="">
+                    <label for="unrecognised" class="form-label form-label--radio">
+                      No, these details are incorrect
+                    </label>
+                  </div>
+
+              </fieldset>
+              <input id="choose-option" class="button" type="submit" value="Continue" />
+
+            </form>
+          </div>
+
+
+
+
+
+
+
+          </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

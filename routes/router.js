@@ -12,6 +12,64 @@ router.get('/home', function(req, res, next) {
 });
 
 // GET v1 index page.
+router.get('/improved-otp/01-overview', function(req, res, next) {
+  res.redirect( '/improved-otp/index' );
+});
+
+
+//////////////////////
+// OTP POST SECTION
+/////////////////////
+
+router.post('/improved-otp/v5/3', function(req, res, next) {
+
+  var identityRoute = req.body.channelChoice;
+
+  if (identityRoute === "both") {
+
+    res.redirect( '/improved-otp/v5/4-both' );
+
+  } else if (identityRoute === "one") {
+
+    res.redirect( '/improved-otp/v5/4-one' );
+
+  } else if (identityRoute === "none") {
+
+    res.redirect( '/improved-otp/v5/sorry' );
+
+  } else {
+
+    res.redirect( '/improved-otp/v5/3-error' );
+
+  }
+
+});
+
+router.post('/improved-otp/v5/4-both', function(req, res, next) {
+
+  var identityRoute = req.body.channelChoice;
+
+  if (identityRoute === "email") {
+
+    res.redirect( '/improved-otp/v5/enter-your-code-email' );
+
+  } else if (identityRoute === "text") {
+
+    res.redirect( '/improved-otp/v5/enter-your-code-text' );
+
+  }  else {
+
+    res.redirect( '/improved-otp/v5/4-both-error#1' );
+
+  }
+
+});
+
+
+
+
+//////////////////////
+// GET v1 index page.
 router.get('/N', function(req, res, next) {
   res.render( 'N/index' );
 });

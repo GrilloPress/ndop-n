@@ -37,10 +37,6 @@
   width: auto;
   border-radius: 0;
 
-  @include media(tablet) {
-    width: auto;
-  }
-
   @include ie-lte(8) {
     border-bottom: 2px solid darken($colour, 15%);
   }

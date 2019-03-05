@@ -1,0 +1,54 @@
+{% set title = 'We now need to send you a security code - Choose if data from your health records is shared for research and planning' %}
+{% set content_title = "Get your security code" %}
+{% set PROTOTYPE_URL = 'improved-otp' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/03-verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-band">
+    <div class="page-section">
+      Choose if data from your health records is shared for research and planning
+    </div>
+  </div>
+
+  <div class="page-section">
+
+
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+
+            <h1 class="h2">{{content_title}}</h1>
+
+            <p>With the details you gave us we think we’ve found your contact details from your health records. We could only find your <span id="contact-method-2">email address</span>.</p>
+
+            <p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
+
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
+              <h2 class="h3">We'll send your security code by email to <span class="otp-contact_field" id="contact-value">
+                al•••••••••••@gmail.com
+              </span></h2>
+
+              <input id="choose-option" class="button" type="submit" value="Send" />
+              <p>
+                <a href="/{{PROTOTYPE_URL}}/index">What to do if you think these contact details are wrong</a>
+              </p>
+            </form>
+          </div>
+
+
+
+
+
+
+
+          </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

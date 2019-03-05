@@ -1,4 +1,4 @@
-{% set title = 'Enter your code - Find out why your NHS data matters' %}
+{% set title = 'Enter your security code - Choose if data from your health records is shared for research and planning' %}
 {% set content_title = 'Enter your security code' %}
 {% set PROTOTYPE_URL = 'improved-otp' %}
 {% block scripts %}
@@ -9,7 +9,7 @@
 <main id="content" role="main">
   <div class="page-band">
     <div class="page-section">
-      Find out why your NHS data matters
+      Choose if data from your health records is shared for research and planning
     </div>
   </div>
 
@@ -18,9 +18,9 @@
         <div class="column--two-thirds">
           <div class="reading-width">
             <p class="alert alert-success" role="alert" style="display:none;" tabindex="-1">
-              We've sent your security code.
+              We've sent your security code to ••••••••788
             </p>
-            <p id="resend-notice" style="display:none;">We’ve resent your code to your chosen option. The code will expire in 30 minutes. Do not close this browser window or your code will also expire.</p>
+            <p id="resend-notice" style="display:none;">We’ve resent your code to your text. The code will expire in 30 minutes. Do not close this browser window or your code will also expire.</p>
 
             <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
               <h2 id="error-summary" class="h3">There is a problem</h2>
@@ -36,7 +36,6 @@
               <h1 class="h2">
                 <label class="form-label h2" for="code-input">Enter your security code</label>
               </h1>
-              <span class="form-label__hint">We sent your security code by <span id="2fa-method"> text to ••••••••788 </span></span>
 
               <div id="code-input-error" class="error error-message">
                 <p class="error-text error-label">No code was provided</p>
